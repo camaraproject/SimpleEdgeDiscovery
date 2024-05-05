@@ -27,7 +27,7 @@ The sub project has no (pre)releases yet, work in progress is within the main br
 ## Contributing
 * Meetings (as part of EdgeCloud API Family)
     * [Registration/Join](https://zoom-lfx.platform.linuxfoundation.org/meeting/94237809115?password=05fb6d8a-a913-47d8-b003-db75ecdaa5d9)
-    * Schedule: 
+    * Schedule: Tuesdays 16h-17 CET, every two weeks.
     * Minutes: Access [meeting minutes] (update this link to your wiki page using the "Share" link).
 * Mailing List
     * Subscribe / Unsubscribe to the mailing list of this Sub Project <https://lists.camaraproject.org/g/sp-§api_family_abbreviation§>.

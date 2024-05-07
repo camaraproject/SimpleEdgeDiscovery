@@ -1,33 +1,33 @@
-<a href="https://github.com/camaraproject/§repo_name§/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/camaraproject/§repo_name§?style=plastic"></a>
-<a href="https://github.com/camaraproject/§repo_name§/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/camaraproject/§repo_name§?style=plastic"></a>
-<a href="https://github.com/camaraproject/§repo_name§/pulls" title="Open Pull Requests"><img src="https://img.shields.io/github/issues-pr/camaraproject/§repo_name§?style=plastic"></a>
-<a href="https://github.com/camaraproject/§repo_name§/graphs/contributors" title="Contributors"><img src="https://img.shields.io/github/contributors/camaraproject/§repo_name§?style=plastic"></a>
-<a href="https://github.com/camaraproject/§repo_name§" title="Repo Size"><img src="https://img.shields.io/github/repo-size/camaraproject/§repo_name§?style=plastic"></a>
-<a href="https://github.com/camaraproject/§repo_name§/blob/main/LICENSE" title="License"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg?style=plastic"></a>
-<a href="https://github.com/camaraproject/§repo_name§/releases/latest" title="Latest Release"><img src="https://img.shields.io/github/release/camaraproject/§repo_name§?style=plastic"></a>
+<a href="https://github.com/camaraproject/SimpleEdgeDiscovery/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/camaraproject/SimpleEdgeDiscovery?style=plastic"></a>
+<a href="https://github.com/camaraproject/SimpleEdgeDiscovery/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/camaraproject/SimpleEdgeDiscovery?style=plastic"></a>
+<a href="https://github.com/camaraproject/SimpleEdgeDiscovery/pulls" title="Open Pull Requests"><img src="https://img.shields.io/github/issues-pr/camaraproject/SimpleEdgeDiscovery?style=plastic"></a>
+<a href="https://github.com/camaraproject/SimpleEdgeDiscovery/graphs/contributors" title="Contributors"><img src="https://img.shields.io/github/contributors/camaraproject/SimpleEdgeDiscovery?style=plastic"></a>
+<a href="https://github.com/camaraproject/SimpleEdgeDiscovery" title="Repo Size"><img src="https://img.shields.io/github/repo-size/camaraproject/SimpleEdgeDiscovery?style=plastic"></a>
+<a href="https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/LICENSE" title="License"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg?style=plastic"></a>
+<a href="https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest" title="Latest Release"><img src="https://img.shields.io/github/release/camaraproject/SimpleEdgeDiscovery?style=plastic"></a>
 
-# §repo_name§
-Repository to describe, develop, document, and test the §repo_name§ API family
+# SimpleEdgeDiscovery
+Repository to describe, develop, document, and test the SimpleEdgeDiscovery API (as part of the EdgeCloud API Family)
 
 ## Scope
-* Service APIs for “§repo_name§” (see APIBacklog.md)  
+* Service APIs for “SimpleEdgeDiscovery” (see APIBacklog.md)  
 * It provides the customer with the ability to:  
-  * §API family description§.
+  * Discover the closest edge cloud zone to a given device..
   * NOTE: The scope of this API family should be limited (at least at the first stage) to 4G and 5G.  
-* Describe, develop, document, and test the APIs (with 1-2 Telcos)  
-* Started: §start date§
+* Describe, develop, document, and test the APIs
+* Started: June 2022 (as part of https://github.com/camaraproject/EdgeCloud/)
 
 ## Release Information
 <!-- Use/uncomment one or multiple the following options -->
-<!-- The sub project has no (pre)releases yet, work in progress is within the main branch -->
+The sub project has no (pre)releases yet, work in progress is within the main branch
 <!-- Pre-releases of this sub project are available in https://github.com/camaraproject/§repo_name§/releases -->
 <!-- The latest public release is available here: https://github.com/camaraproject/§repo_name§/releases/latest -->
 <!-- For changes see [CHANGELOG.md](https://github.com/camaraproject/§repo_name§/blob/main/CHANGELOG.md) -->
 
 ## Contributing
-* Meetings
-    * [Registration](https://wiki.camaraproject.org/x/TQAG) Update this link with your meeting join link
-    * Schedule: 
+* Meetings (as part of EdgeCloud API Family)
+    * [Registration/Join](https://zoom-lfx.platform.linuxfoundation.org/meeting/94237809115?password=05fb6d8a-a913-47d8-b003-db75ecdaa5d9)
+    * Schedule: Tuesdays 16h-17 CET, every two weeks.
     * Minutes: Access [meeting minutes] (update this link to your wiki page using the "Share" link).
 * Mailing List
     * Subscribe / Unsubscribe to the mailing list of this Sub Project <https://lists.camaraproject.org/g/sp-§api_family_abbreviation§>.

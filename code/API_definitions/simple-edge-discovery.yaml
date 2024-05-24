@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
   title: Simple Edge Discovery API
-  version: 0.10.0-alpha.1
+  version: wip
   description: |
     # Find the closest Edge Cloud Zone
     ---
@@ -182,7 +182,7 @@ servers:
         default: https://localhost:443
         description: API root.
       basePath:
-        default: simple-edge-discovery/v1
+        default: simple-edge-discovery/vwip
         description: Base path for the Simple Edge Discovery API.
 
 tags:
@@ -406,10 +406,6 @@ components:
      format: ipv6
      example: 2001:db8:85a3:8d3:1319:8a2e:370:7344
 
-
-###################################
-# RESPONSES
-####################################
   responses:
     400BadRequest:
       description: Bad Request
@@ -646,5 +642,3 @@ components:
               "status": 504,
               "message": "The service is currently not available"
             }
-
-

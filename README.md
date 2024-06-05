@@ -30,5 +30,5 @@ The sub project has no (pre)releases yet, work in progress is within the main br
     * Schedule: Tuesdays 16h-17 CET, every two weeks.
     * Minutes: Access [meeting minutes] (update this link to your wiki page using the "Share" link).
 * Mailing List
-    * Subscribe / Unsubscribe to the mailing list of this Sub Project <https://lists.camaraproject.org/g/sp-§api_family_abbreviation§>.
-    * A message to the community of this Sub Project can be sent using <sp-§api_family_abbreviation§@lists.camaraproject.org>.
+    * Subscribe / Unsubscribe to the mailing list of this Sub Project [https://lists.camaraproject.org/g/sp-simple-edge-discovery](https://lists.camaraproject.org/g/sp-simple-edge-discovery).
+    * A message to the community of this Sub Project can be sent using [sp-simple-edge-discovery@lists.camaraproject.org](sp-simple-edge-discovery@lists.camaraproject.org).

@@ -79,7 +79,7 @@ info:
       Accept: application/json
       Phone-Number: +441234567890
     ```
-    
+
     Example where API client is on a network-attached device:
 
     ```
@@ -87,7 +87,7 @@ info:
       Host: example.com
       Accept: application/json
     ```
-    
+
     # Responses
 
     ## Success
@@ -95,7 +95,7 @@ info:
     A JSON object is returned containing an array with a single member object.
     This contains identifiers for the closest Edge Cloud Zone. The HTTP status
     code will be`200 OK`. An example response:
-    
+
     ```
     [
       {
@@ -207,7 +207,7 @@ paths:
           schema:
             type: string
             enum:
-             - closest
+              - closest
 
         - name: IPv4-Address
           in: header
@@ -216,7 +216,7 @@ paths:
           example: "84.125.93.10"
           schema:
             $ref: "#/components/schemas/SingleIpv4Addr"
-            
+
         - name: IPv6-Address
           in: header
           required: false
@@ -234,7 +234,7 @@ paths:
           required: false
           schema:
             $ref: "#/components/schemas/NetworkAccessIdentifier"
-            
+
         - name: Phone-Number
           in: header
           example: "+441234567890"
@@ -245,7 +245,7 @@ paths:
             prefixed with '+'.
           schema:
             $ref: "#/components/schemas/PhoneNumber"
-            
+
         - name: x-correlator
           in: header
           required: false
@@ -306,7 +306,7 @@ components:
       description: OpenID Provider Configuration Information.
       type: openIdConnect
       openIdConnectUrl: .well-known/openid-configuration
-      
+
   headers:
     x-correlator:
       description: |
@@ -334,7 +334,7 @@ components:
 
     EdgeCloudZone:
       type: object
-      description:  |
+      description: |
         An Edge Cloud Zone, uniquely identified by a combination
         of the value of the Edge Resource Name object and the value of the
         Provider object (the name of the cloud provider or operator hosting that
@@ -381,7 +381,7 @@ components:
             This parameter appears when there is an error.
             A human readable explanation specific to this occurrence of the
             problem.
-            
+
     PhoneNumber:
      description: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+'.
      type: string

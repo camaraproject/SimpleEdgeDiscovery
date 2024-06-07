@@ -246,14 +246,14 @@ paths:
           schema:
             $ref: "#/components/schemas/PhoneNumber"
             
-        - name: X-Correlator
+        - name: x-correlator
           in: header
           required: false
           description: |
-            When the API Consumer includes the "X-Correlator" header in the
+            When the API Consumer includes the "x-correlator" header in the
             request, the API provider must include it in the response with
             the same value that was used in the request. Otherwise, it is
-            optional to include the "X-Correlator" header in the response with
+            optional to include the "x-correlator" header in the response with
              any valid value. Recommendation is to use UUID for values.
           schema:
             type: string
@@ -308,12 +308,12 @@ components:
       openIdConnectUrl: .well-known/openid-configuration
       
   headers:
-    X-Correlator:
+    x-correlator:
       description: |
-       When the API Consumer includes the "X-Correlator" header in the request,
+       When the API Consumer includes the "x-correlator" header in the request,
         the API provider must include it in the response with the same value t
         hat was used in the request. Otherwise, it is optional to include the
-        "X-Correlator" header in the response with any valid value.
+        "x-correlator" header in the response with any valid value.
         Recommendation is to use UUID for values.
       required: false
       schema:
@@ -410,8 +410,8 @@ components:
     400BadRequest:
       description: Bad Request
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -459,8 +459,8 @@ components:
     401Unauthorized:
       description: Unauthorized
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -478,8 +478,8 @@ components:
     403Forbidden:
       description: Forbidden
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -497,8 +497,8 @@ components:
     404NotFound:
       description: Subscriber Not Found
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -518,8 +518,8 @@ components:
     405MethodNotAllowed:
       description: Method Not Allowed
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -540,8 +540,8 @@ components:
     406Unacceptable:
       description: Not Acceptable
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -560,8 +560,8 @@ components:
     429TooManyRequests:
       description: Too Many Requests
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -582,8 +582,8 @@ components:
     500InternalServerError:
       description: Internal Server Error
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -598,8 +598,8 @@ components:
     502BadGateway:
       description: Bad Gateway
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -614,8 +614,8 @@ components:
     503ServiceUnavailable:
       description: Service Unavailable
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -630,8 +630,8 @@ components:
     504GatewayTimeout:
       description: Gateway Time-Out
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:

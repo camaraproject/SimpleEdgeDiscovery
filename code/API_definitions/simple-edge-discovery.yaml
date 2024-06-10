@@ -79,7 +79,7 @@ info:
       Accept: application/json
       Phone-Number: +441234567890
     ```
-    
+
     Example where API client is on a network-attached device:
 
     ```
@@ -87,7 +87,7 @@ info:
       Host: example.com
       Accept: application/json
     ```
-    
+
     # Responses
 
     ## Success
@@ -95,7 +95,7 @@ info:
     A JSON object is returned containing an array with a single member object.
     This contains identifiers for the closest Edge Cloud Zone. The HTTP status
     code will be`200 OK`. An example response:
-    
+
     ```
     [
       {
@@ -207,7 +207,7 @@ paths:
           schema:
             type: string
             enum:
-             - closest
+              - closest
 
         - name: IPv4-Address
           in: header
@@ -216,7 +216,7 @@ paths:
           example: "84.125.93.10"
           schema:
             $ref: "#/components/schemas/SingleIpv4Addr"
-            
+
         - name: IPv6-Address
           in: header
           required: false
@@ -234,7 +234,7 @@ paths:
           required: false
           schema:
             $ref: "#/components/schemas/NetworkAccessIdentifier"
-            
+
         - name: Phone-Number
           in: header
           example: "+441234567890"
@@ -245,15 +245,15 @@ paths:
             prefixed with '+'.
           schema:
             $ref: "#/components/schemas/PhoneNumber"
-            
-        - name: X-Correlator
+
+        - name: x-correlator
           in: header
           required: false
           description: |
-            When the API Consumer includes the "X-Correlator" header in the
+            When the API Consumer includes the "x-correlator" header in the
             request, the API provider must include it in the response with
             the same value that was used in the request. Otherwise, it is
-            optional to include the "X-Correlator" header in the response with
+            optional to include the "x-correlator" header in the response with
              any valid value. Recommendation is to use UUID for values.
           schema:
             type: string
@@ -306,14 +306,14 @@ components:
       description: OpenID Provider Configuration Information.
       type: openIdConnect
       openIdConnectUrl: .well-known/openid-configuration
-      
+
   headers:
-    X-Correlator:
+    x-correlator:
       description: |
-       When the API Consumer includes the "X-Correlator" header in the request,
+       When the API Consumer includes the "x-correlator" header in the request,
         the API provider must include it in the response with the same value t
         hat was used in the request. Otherwise, it is optional to include the
-        "X-Correlator" header in the response with any valid value.
+        "x-correlator" header in the response with any valid value.
         Recommendation is to use UUID for values.
       required: false
       schema:
@@ -334,7 +334,7 @@ components:
 
     EdgeCloudZone:
       type: object
-      description:  |
+      description: |
         An Edge Cloud Zone, uniquely identified by a combination
         of the value of the Edge Resource Name object and the value of the
         Provider object (the name of the cloud provider or operator hosting that
@@ -381,37 +381,47 @@ components:
             This parameter appears when there is an error.
             A human readable explanation specific to this occurrence of the
             problem.
-            
+
     PhoneNumber:
-     description: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+'.
-     type: string
-     pattern: '^\+[1-9][0-9]{4,14}$'
-     example: "+123456789"
-  
+      description: A public identifier addressing a telephone subscription. In
+        mobile networks it corresponds to the MSISDN (Mobile Station
+        International Subscriber Directory Number). In order to be globally
+        unique it has to be formatted in international format, according to
+        E.164 standard, prefixed with '+'.
+      type: string
+      pattern: '^\+[1-9][0-9]{4,14}$'
+      example: "+123456789"
+
     NetworkAccessIdentifier:
-     description: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator.
-     type: string
-     example: "123456789@domain.com"
-  
+      description: A public identifier addressing a subscription in a mobile
+        network. In 3GPP terminology, it corresponds to the GPSI formatted with
+        the External Identifier ({Local Identifier}@{Domain Identifier}).
+        Unlike the telephone number, the network access identifier is not
+        subjected to portability ruling in force, and is individually managed
+        by each operator.
+      type: string
+      example: "123456789@domain.com"
+
     SingleIpv4Addr:
-     description: A single IPv4 address with no subnet mask
-     type: string
-     format: ipv4
-     example: "84.125.93.10"
-  
+      description: A single IPv4 address with no subnet mask
+      type: string
+      format: ipv4
+      example: "84.125.93.10"
+
     DeviceIpv6Address:
-     description: |
-      The device should be identified by the observed IPv6 address, or by any single IPv6 address from within the subnet allocated to the device (e.g. adding ::0 to the /64 prefix).
-     type: string
-     format: ipv6
-     example: 2001:db8:85a3:8d3:1319:8a2e:370:7344
+      description: The device should be identified by the observed IPv6
+       address, or by any single IPv6 address from within the subnet allocated
+        to the device (e.g.adding ::0 to the /64 prefix).
+      type: string
+      format: ipv6
+      example: "2001:db8:85a3:8d3:1319:8a2e:370:7344"
 
   responses:
     400BadRequest:
       description: Bad Request
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -459,8 +469,8 @@ components:
     401Unauthorized:
       description: Unauthorized
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -478,8 +488,8 @@ components:
     403Forbidden:
       description: Forbidden
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -497,8 +507,8 @@ components:
     404NotFound:
       description: Subscriber Not Found
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -518,8 +528,8 @@ components:
     405MethodNotAllowed:
       description: Method Not Allowed
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -540,8 +550,8 @@ components:
     406Unacceptable:
       description: Not Acceptable
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -560,8 +570,8 @@ components:
     429TooManyRequests:
       description: Too Many Requests
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -582,8 +592,8 @@ components:
     500InternalServerError:
       description: Internal Server Error
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -598,8 +608,8 @@ components:
     502BadGateway:
       description: Bad Gateway
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -614,8 +624,8 @@ components:
     503ServiceUnavailable:
       description: Service Unavailable
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:
@@ -630,8 +640,8 @@ components:
     504GatewayTimeout:
       description: Gateway Time-Out
       headers:
-        X-Correlator:
-          $ref: "#/components/headers/X-Correlator"
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
       content:
         application/json:
           schema:

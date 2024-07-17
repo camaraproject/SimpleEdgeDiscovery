@@ -292,7 +292,6 @@ paths:
           description: |
             3GPP network access identifier for the subscription
             being used by the device.
-          example: "4d596ac1-7822-4927-a3c5-d72e1f922c94@domain.com"
           schema:
             $ref: "#/components/schemas/NetworkAccessIdentifier"
 
@@ -735,5 +734,3 @@ components:
     headers:
      x-correlator:
       $ref: "#/components/headers/x-correlator"
-
-

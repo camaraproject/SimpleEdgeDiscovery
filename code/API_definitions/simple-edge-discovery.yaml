@@ -454,19 +454,19 @@ components:
       type: object
       description: Error information
       required:
-       - message
-       - status
-       - code
+        - message
+        - status
+        - code
       properties:
-       message:
-        type: string
-        description: A human readable description of what the event represents
-       status:
-        type: integer
-        description: HTTP response status code
-       code:
-        type: string
-        description: Friendly Code to describe the error
+        message:
+         type: string
+         description: A human readable description of what the event represents
+        status:
+         type: integer
+         description: HTTP response status code
+        code:
+         type: string
+         description: Friendly Code to describe the error
 
     PhoneNumber:
       description: A public identifier addressing a telephone subscription. In
@@ -509,29 +509,29 @@ components:
       maximum: 65535
 
   responses:
-     Generic401:
-      description: Unauthorized
-      content:
-       application/json:
-        schema:
-          $ref: "#/components/schemas/ErrorInfo"
-        examples:
-         GENERIC_401_UNAUTHENTICATED:
-          description: Request cannot be authenticated
-          value:
-           status: 401
-           code: UNAUTHENTICATED
-           message: Request not authenticated due to missing, invalid, or expired credentials.
-         GENERIC_401_AUTHENTICATION_REQUIRED:
-          description: New authentication is needed, authentication is no longer valid
-          value:
-           status: 401
-           code: AUTHENTICATION_REQUIRED
-           message: New authentication is required.
-      headers:
+    Generic401:
+       description: Unauthorized
+       content:
+        application/json:
+         schema:
+           $ref: "#/components/schemas/ErrorInfo"
+         examples:
+          GENERIC_401_UNAUTHENTICATED:
+           description: Request cannot be authenticated
+           value:
+            status: 401
+            code: UNAUTHENTICATED
+            message: Request not authenticated due to missing, invalid, or expired credentials.
+          GENERIC_401_AUTHENTICATION_REQUIRED:
+           description: New authentication is needed, authentication is no longer valid
+           value:
+            status: 401
+            code: AUTHENTICATION_REQUIRED
+            message: New authentication is required.
+       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic403:
+    Generic403:
       description: Forbidden
       content:
        application/json:
@@ -553,7 +553,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic404:
+    Generic404:
       description: Not found
       content:
        application/json:
@@ -575,7 +575,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic405:
+    Generic405:
       description: Method Not Allowed
       content:
        application/json:
@@ -591,7 +591,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic406:
+    Generic406:
       description: Not Acceptable
       content:
        application/json:
@@ -610,7 +610,7 @@ components:
       headers:
        x-correlator:
         $ref: "#/components/headers/x-correlator"
-     Generic422:
+    Generic422:
       description: Unprocessable Content
       content:
        application/json:
@@ -632,7 +632,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic429:
+    Generic429:
       description: Too Many Requests
       content:
        application/json:
@@ -654,7 +654,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic500:
+    Generic500:
       description: Internal Server Error
       content:
        application/json:
@@ -670,7 +670,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic501:
+    Generic501:
       description: Not Implemented
       content:
        application/json:
@@ -686,7 +686,7 @@ components:
       headers:
        x-correlator:
         $ref: "#/components/headers/x-correlator"
-     Generic502:
+    Generic502:
       description: Bad Gateway
       content:
        application/json:
@@ -702,7 +702,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic503:
+    Generic503:
       description: Service Unavailable
       content:
        application/json:
@@ -718,7 +718,7 @@ components:
       headers:
         x-correlator:
          $ref: "#/components/headers/x-correlator"
-     Generic504:
+    Generic504:
       description: Gateway Timeout
       content:
        application/json:

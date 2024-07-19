@@ -28,7 +28,7 @@ sequenceDiagram
     Note over Application Client,Operator: PRE App on device attached <br/> to operator network
     Note over Application Server,Operator: PRE App developer registered, <br/> authenticated and authorised
     Application Client->>Operator: GET /edge-cloud-zones?filter=closest {header: device identifier(s)}
-    Operator->>Operator: calculate closest Edge Cloud Xone for device
+    Operator->>Operator: calculate closest Edge Cloud Zone for device
     Operator->>Application Client: name of closest Edge Cloud Zone
    alt Application client has a local mapping of server endpoints to Edge Cloud Zones
     Application Client->>App Client: lookup app server endpoint (Edge Cloud Zone name)

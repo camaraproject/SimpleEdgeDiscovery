@@ -219,12 +219,11 @@ info:
   # Further info and support
 
   ---
- contact:
-  email: sp-edc@lists.camaraproject.org
- license:
+
+license:
   name: Apache 2.0
   url: https://www.apache.org/licenses/LICENSE-2.0.html
-  x-camara-commonalities: 0.4.0
+x-camara-commonalities: 0.4.0
 externalDocs:
  description: Product documentation at CAMARA.
  url: https://github.com/camaraproject/EdgeCloud

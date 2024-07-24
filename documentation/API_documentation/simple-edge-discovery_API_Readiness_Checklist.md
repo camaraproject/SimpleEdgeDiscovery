@@ -15,5 +15,5 @@ Checklist for simple-edge-discovery v0.11.0-rc.1 in r1.1
 |  9 | Test result statement                        |   O   |         O         |    O    |    M   |  N   |  |
 | 10 | API release numbering convention applied     |   M   |         M         |    M    |    M   |  Y   |      |
 | 11 | Change log updated                           |   M   |         M         |    M    |    M   |  Y   | [link](/CHANGELOG.md) |
-| 12 | Previous public release was certified        |   O   |         O         |    O    |    M   |  N   |      |
+| 12 | Previous public release was certified        |   O   |         O         |    O    |    M   |  Y   | [link](https://www.open-gateway.com)     |
 

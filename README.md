@@ -19,16 +19,15 @@ Repository to describe, develop, document, and test the SimpleEdgeDiscovery API 
 
 ## Release Information
 <!-- Use/uncomment one or multiple the following options -->
-The sub project has no (pre)releases yet, work in progress is within the main branch
-<!-- Pre-releases of this sub project are available in https://github.com/camaraproject/§repo_name§/releases -->
+Pre-releases of this sub project are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
 <!-- The latest public release is available here: https://github.com/camaraproject/§repo_name§/releases/latest -->
-<!-- For changes see [CHANGELOG.md](https://github.com/camaraproject/§repo_name§/blob/main/CHANGELOG.md) -->
+For changes see [CHANGELOG.md](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/CHANGELOG.md)
 
 ## Contributing
 * Meetings (as part of EdgeCloud API Family)
     * [Registration/Join](https://zoom-lfx.platform.linuxfoundation.org/meeting/94237809115?password=05fb6d8a-a913-47d8-b003-db75ecdaa5d9)
     * Schedule: Tuesdays 16h-17 CET, every two weeks.
-    * Minutes: Access [meeting minutes] (update this link to your wiki page using the "Share" link).
+    * Minutes: Access [meeting minutes](https://wiki.camaraproject.org/display/CAM/EdgeCloud+Meeting+Minutes).
 * Mailing List
     * Subscribe / Unsubscribe to the mailing list of this Sub Project [https://lists.camaraproject.org/g/sp-simple-edge-discovery](https://lists.camaraproject.org/g/sp-simple-edge-discovery).
     * A message to the community of this Sub Project can be sent using [sp-simple-edge-discovery@lists.camaraproject.org](sp-simple-edge-discovery@lists.camaraproject.org).

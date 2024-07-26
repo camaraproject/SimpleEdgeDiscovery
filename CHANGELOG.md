@@ -29,7 +29,7 @@ This release contains the definition and documentation of
 * simple-edge-discovery v0.11.0-rc.1, a release-candidate pre-release
 
 The API definition(s) are based on
-* Commonalities v0.4-rc.1
+* Commonalities v0.4.0-rc.1
 * Identity and Consent Management v0.2.0-rc.1
 
 <!--In case of a repository with multiple APIs, list all APIs above, and for each API version that changed in this release, create a section as below, with the header 2: API-name API-version-x.y.z, and level 3 subsections. Also mention if an API in the repository is unchanged.-->
@@ -60,7 +60,7 @@ simple-edge-discovery v0.11.0-rc.1 is a new release candidate version with signi
   - `Operation` tag now follows agreed syntax
   - Error model alignment, including device identifier-related errors
   - Updated the API Readiness Checklist to the new format
-  - Documentation: clarified distinction between device/server usage of the SED API
+  - Documentation: clarified distinction between device/server usage of the SimpleEdgeDiscovery API
 
 ### Fixed
   - Trailiing whitespace issues in YAML

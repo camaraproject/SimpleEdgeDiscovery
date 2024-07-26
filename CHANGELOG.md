@@ -4,7 +4,7 @@ NOTE:
 
 ## Table of contents
 
-- **[r1.1](#r1.1)**
+- **[r1.1 - rc](#r11---rc)**
 - [r0.9.3 - rc](#r093---rc)
 - [r0.8.1](#r081)
 
@@ -17,16 +17,16 @@ The below sections record the changes for each API version in each (pre-)release
 * for subsequent alpha or release-candidate API versions, the delta with respect to the previous pre-release
 * for a public API version, the consolidated changes since the release of the previous public API version
 
-DISCLAIMER: in this example file, links and other content have been edited from the original to fit the example (hence links may be broken).
+
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
 
-# r1.1 - public
+# r1.1 - rc
 
 ## Release Notes
 
 This release contains the definition and documentation of
-* simple-edge-discovery v0.11.0-rc.1, an initial public pre-release
+* simple-edge-discovery v0.11.0-rc.1, a release-candidate pre-release
 
 The API definition(s) are based on
 * Commonalities v0.4-rc.1
@@ -36,7 +36,7 @@ The API definition(s) are based on
 
 ## simple-edge-discovery v0.11.0-rc.1
 
-simple-edge-discovery v0.11.0-rc.1 is a new initial public version with significant changes compared to the previous initial version v0.9.3-rc and is not backward compatible. 
+simple-edge-discovery v0.11.0-rc.1 is a new release candidate version with significant changes compared to the previous version v0.9.3-rc and is not backward compatible. 
 
 ### Main changes
 - This version is primarily to align with the changes to Commonalities 0.4-rc.1 and Identity and Consent Management v0.2.0-rc.1, and also includes changes to resource names agreed across the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) API family. The scope of release (issues closed) is available in [#3](https://github.com/camaraproject/SimpleEdgeDiscovery/issues/3).

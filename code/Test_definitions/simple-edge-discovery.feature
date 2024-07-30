@@ -19,7 +19,7 @@
 #* ---license-end
 #*/
 
-Feature: CAMARA Simple Edge Discovery API, v0.10.0 - Operation readClosestEdgeCloudZone
+Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
 
   Background:
     Given an environment at "apiRoot"

@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
  title: Simple Edge Discovery API
- version: 0.11.0-rc.1
+ version: 0.11.0-rc.2
  x-camara-commonalities: 0.4.0
  description: |
   # Find the closest Edge Cloud Zone
@@ -71,9 +71,10 @@ info:
   in the request header. If that request fails with a `404 Not Found` error
   then retry the request but this time include a device identifier.
 
-  NOTE1: the MNO might support only a subset of these options. The API invoker
-  can provide multiple identifiers to be compatible across different MNOs. In
-  this case the identifiers MUST belong to the same device.
+  NOTE1: the network operator might support only a subset of these options.
+  The API invoker can provide multiple identifiers to be compatible across
+  different network operators. In this case the identifiers MUST belong to the
+  same device.
 
   NOTE2: for the Commonalities release v0.4, we are enforcing that the
   `networkAccessIdentifier` is only part of the schema for future-proofing, and
@@ -201,9 +202,11 @@ info:
 
   # Authorization and authentication
 
-  CAMARA guidelines defines a set of authorization flows which can grant API
-  clients access to the API functionality, as outlined in the document
-  [CAMARA-API-access-and-user-consent.md](https://github.com/camaraproject/IdentityAndConsentManagement/blob/main/documentation/CAMARA-API-access-and-user-consent.md).
+  The "Camara Security and Interoperability Profile" provides details on how a
+  client requests an access token. Please refer to Identify and Consent
+  Management (https://github.com/camaraproject/IdentityAndConsentManagement/)
+  for the released version of the Profile.
+
   Which specific authorization flows are to be used will be determined during
   onboarding process, happening between the API Client and the Telco Operator
   exposing the API, taking into account the declared purpose for accessing
@@ -230,7 +233,7 @@ externalDocs:
  url: https://github.com/camaraproject/EdgeCloud
 
 servers:
- - url: "{apiRoot}/simple-edge-discovery/v0.11rc1"
+ - url: "{apiRoot}/simple-edge-discovery/v0.11rc2"
    variables:
     apiRoot:
      default: https://localhost:9091
@@ -356,8 +359,6 @@ paths:
      $ref: "#/components/responses/Generic403"
     "404":
      $ref: "#/components/responses/Generic404"
-    "405":
-     $ref: "#/components/responses/Generic405"
     "406":
      $ref: "#/components/responses/Generic406"
     "422":
@@ -403,7 +404,6 @@ components:
    required: false
    schema:
     type: string
-    format: uuid
 
  schemas:
   EdgeCloudZones:
@@ -572,22 +572,6 @@ components:
         status: 404
         code: DEVICE_NOT_FOUND
         message: Device identifier not found.
-   headers:
-    x-correlator:
-     $ref: "#/components/headers/x-correlator"
-  Generic405:
-   description: Method Not Allowed
-   content:
-    application/json:
-     schema:
-      $ref: "#/components/schemas/ErrorInfo"
-     examples:
-      GENERIC_405_METHOD_NOT_ALLOWED:
-       description: Invalid HTTP verb used with a given endpoint
-       value:
-        status: 405
-        code: METHOD_NOT_ALLOWED
-        message: The requested method is not allowed/supported on the target resource.
    headers:
     x-correlator:
      $ref: "#/components/headers/x-correlator"

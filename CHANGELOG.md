@@ -4,7 +4,8 @@ NOTE:
 
 ## Table of contents
 
-- **[r1.2 - rc](#r12---rc)**
+- [r1.3][#r13]
+- [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)
 - [r0.9.3 - rc](#r093---rc)
 - [r0.8.1](#r081)
@@ -21,6 +22,24 @@ The below sections record the changes for each API version in each (pre-)release
 
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
+
+# r1.3
+
+This release contains the definition and documentation of
+* simple-edge-discovery v1.0.0, a stable public release.
+
+The API definition(s) are based on
+* Commonalities v0.4.0
+* Identity and Consent Management v0.2.0
+
+It contains the following changes compared to [r1.2 - rc](#r12---rc).
+
+### Changed
+  - info.version to 1.0.0
+  - version in servers.url to v1
+  - API Readiness checklist updated 
+
+Full Changelog: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.2...r1.3
 
 # r1.2 - rc
 
@@ -41,7 +60,7 @@ It contains the following corrections compared to [r1.1 - rc](#r11---rc).
   - documentation: replaced term 'MNO' with 'network operator'
   - documentation: updated section on authentication and authorisation
 
-Full Changelog: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.1...r1.2  
+Full Changelog: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.1...r1.2
 
 
 # r1.1 - rc

@@ -19,8 +19,10 @@ Repository to describe, develop, document, and test the SimpleEdgeDiscovery API 
 
 ## Release Information
 <!-- Use/uncomment one or multiple the following options -->
+The latest public release is available here: https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest
+
 Pre-releases of this sub project are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
-<!-- The latest public release is available here: https://github.com/camaraproject/§repo_name§/releases/latest -->
+
 For changes see [CHANGELOG.md](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/CHANGELOG.md)
 
 ## Contributing

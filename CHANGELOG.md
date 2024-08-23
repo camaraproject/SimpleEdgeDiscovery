@@ -4,7 +4,8 @@ NOTE:
 
 ## Table of contents
 
-- **[r1.1 - rc](#r11---rc)**
+- **[r1.2 - rc](#r12---rc)**
+- [r1.1 - rc](#r11---rc)
 - [r0.9.3 - rc](#r093---rc)
 - [r0.8.1](#r081)
 
@@ -21,6 +22,31 @@ The below sections record the changes for each API version in each (pre-)release
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
 
+# r1.2 - rc
+
+This release contains the definition and documentation of
+* simple-edge-discovery v1.0.0-rc.1, a release-candidate pre-release
+
+The API definition(s) are based on
+* Commonalities v0.4.0-rc.2
+* Identity and Consent Management v0.2.0-rc.2
+
+This release contains the definition and documentation of
+* simple-edge-discovery v0.11.0-rc.2, a release-candidate pre-release.
+
+It contains the following corrections compared to [r1.1 - rc](#r11---rc).
+
+### Removed
+  - UUID format constraint from x-correlator 
+  - 405 Method Not Allowed error response
+
+### Changed
+  - documentation: replaced term 'MNO' with 'network operator'
+  - documenatation: updated section on authentication and authorisation
+
+Full Changelog: https://github.com/Kevsy/sandbox/compare/r1.1...r1.2  
+
+
 # r1.1 - rc
 
 ## Release Notes
@@ -29,8 +55,8 @@ This release contains the definition and documentation of
 * simple-edge-discovery v0.11.0-rc.1, a release-candidate pre-release
 
 The API definition(s) are based on
-* Commonalities v0.4.0-rc.1
-* Identity and Consent Management v0.2.0-rc.1
+* Commonalities v0.4.0-rc.2
+* Identity and Consent Management v0.2.0-rc.2
 
 <!--In case of a repository with multiple APIs, list all APIs above, and for each API version that changed in this release, create a section as below, with the header 2: API-name API-version-x.y.z, and level 3 subsections. Also mention if an API in the repository is unchanged.-->
 

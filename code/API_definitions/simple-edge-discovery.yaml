@@ -320,7 +320,6 @@ paths:
         any valid value. Recommendation is to use UUID for values.
       schema:
        type: string
-       format: uuid
 
    responses:
     "200":

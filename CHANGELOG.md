@@ -4,7 +4,7 @@ NOTE:
 
 ## Table of contents
 
-- [r1.3][#r13]
+- [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)
 - [r0.9.3 - rc](#r093---rc)

@@ -50,7 +50,7 @@ info:
   The API returns the closest Edge Cloud Zone to a given device, so that
   device needs to be identifiable by the network. This can be achieved either
   by passing a device identifier in the request header, or, from the 3-legged
-  access token where implemeented by the operator.
+  access token where implemented by the operator.
 
   ## Passing a device identifier in the request header
 
@@ -68,8 +68,8 @@ info:
 
   * If you call the API from a device attached to the operator network, then
   you can attempt the request without passing device identifier(s) parameters
-  in the request header. If that request fails with a `404 Not Found` error
-  then retry the request but this time include a device identifier.
+  in the request header. If that returns a 422 `UNIDENTIFIABLE_DEVICE`
+  error then retry the request but this time include a device identifier.
 
   NOTE1: the network operator might support only a subset of these options.
   The API invoker can provide multiple identifiers to be compatible across
@@ -114,27 +114,48 @@ info:
 
   ## Identifying a device from the access token
 
-  This specification defines the `device` object field as optional in API requests, specifically in cases where the API is accessed using a 3-legged access token and the device can be uniquely identified by the token. This approach simplifies API usage for API consumers by relying on the device information associated with the access token used to invoke the API.
+  This specification defines the `device` identifying headers as optional in
+  API requests, specifically in cases where the API is accessed using a
+  3-legged access token and the device can be uniquely identified by the token.
+  This approach simplifies API usage for API consumers by relying on the device
+  information associated with the access token used to invoke the API.
 
   ### Handling of device information:
 
-  #### Optional device object for 3-legged tokens:
+  #### Optional device identifying headers for 3-legged tokens:
 
-  - When using a 3-legged access token, the device associated with the access token must be considered as the device for the API request. This means that the device object is not required in the request, and if included it must identify the same device, therefore **it is recommended NOT to include it in these scenarios** to simplify the API usage and avoid additional validations.
+  - When using a 3-legged access token, the device associated with the access
+    token must be considered as the device for the API request. This means that
+    a device  identifying header  is not required in the request, and if
+    included it must identify the same device, therefore **it is recommended
+    NOT to include it in these scenarios** to simplify the API usage and avoid
+    additional validations.
 
   #### Validation mechanism:
 
-  - The server will extract the device identification from the access token, if available.
-  - If the API request additionally includes a `device` object when using a 3-legged access token, the API will validate that the device identifier provided matches the one associated with the access token.
-  - If there is a mismatch, the API will respond with a 403 - INVALID_TOKEN_CONTEXT error, indicating that the device information in the request does not match the token.
+  - The server will extract the device identification from the access token, if
+    available.
+  - If the API request additionally includes a `device`  identifying header
+    when using a 3-legged access token, the API will validate that the device
+    identifier provided matches the one associated with the access token.
+  - If there is a mismatch, the API will respond with a
+    403 `INVALID_TOKEN_CONTEXT` error, indicating that the device information
+    in the request does not match the token.
 
   #### Error handling for unidentifiable devices:
 
-  - If the `device` object is not included in the request and the device information cannot be derived from the 3-legged access token, the server will return a 422 `UNIDENTIFIABLE_DEVICE` error.
+  - If the `device`  identifying header is not included in the request and the
+    device information cannot be derived from the 3-legged access token, nor
+    inferred by the operator if the request is made directly from the client,
+    the server will return a 422 `UNIDENTIFIABLE_DEVICE` error.
 
   #### Restrictions for tokens without an associated authenticated identifier:
 
-  - For scenarios which do not have a single device identifier associated to the token during the authentication flow, e.g. 2-legged access tokens, the `device` object MUST be provided in the API request. This ensures that the device identification is explicit and valid for each API call made with these tokens.
+  - For scenarios which do not have a single device identifier associated to
+    the token during the authentication flow, e.g. 2-legged access tokens, a
+    `device` identifying header MUST be provided in the API request. This
+    ensures that the device identification is explicit and valid for each API
+    call made with these tokens.
 
   # Responses
 

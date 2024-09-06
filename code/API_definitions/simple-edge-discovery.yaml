@@ -633,6 +633,12 @@ components:
         status: 422
         code: DEVICE_NOT_APPLICABLE
         message: The Service is not available for the provided device.
+      GENERIC_422_UNIDENTIFIABLE_DEVICE:
+       description: The device identifier is not included in the request and the device information cannot be derived from the 3-legged access token
+       value:
+        status: 422
+        code: UNIDENTIFIABLE_DEVICE
+        message: The device cannot be identified.
    headers:
     x-correlator:
      $ref: "#/components/headers/x-correlator"

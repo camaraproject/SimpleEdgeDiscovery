@@ -32,17 +32,38 @@ The API definition(s) are based on
 * Commonalities v0.4.0
 * Identity and Consent Management v0.2.0
 
-It contains the following changes compared to [r1.2 - rc](#r12---rc).
+It contains the following changes compared to last public release [r0.9.3 - rc](#r093---rc):
+
+### Added
+  - Gherkin `.feature` file in Test_definitions
+  - Implementation of ICM consent guidelines
+  - Addition of `x-camara-commonalities` object to YAML
+  - Documentation: added warning about use of `networkAccessIdentifier`, added User Story
 
 ### Changed
   - info.version to 1.0.0
   - version in servers.url to v1
-  - API Readiness checklist updated 
+  - Changed `mecplatforms` to  `EdgeCloudZones` in alignment with EdgeCloud API family 
+  - Compliance with DeviceIdentifier schema
+  - The device identifier may now be available from a 3-legged access token 
+  - Change of `X-Correlator` to `x-correlator`
+  - `Operation` tag now follows agreed syntax
+  - Error model alignment, including device identifier-related errors
+  - Documentation: updated the API Readiness Checklist
+  - Documentation: clarified distinction between device/server usage of the SimpleEdgeDiscovery API
+  - Documentation: replaced term 'MNO' with 'network operator'
+  - Documentation: updated section on authentication and authorisation
 
-Detailed changelog from r1.3 to r1.2: : https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.2...r1.3
+### Removed
+  - UUID format constraint from x-correlator 
+  - 405 Method Not Allowed error response
+  - Removed example for `networkAccessIdentifier`
 
-The full Changelog of this public release from the last public release (r0.9.3 - rc) also includes
-the changes summarised in the following sections for [r1.2 - rc](#r12---rc) and [r1.1 - rc](#r11---rc).
+### Fixed
+  - Trailiing whitespace issues in YAML
+
+
+ Changelog from r1.3 to r1.2 only: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.2...r1.3
 
 # r1.2 - rc
 

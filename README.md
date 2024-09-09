@@ -11,7 +11,7 @@ Repository to describe, develop, document, and test the SimpleEdgeDiscovery API 
 
 ## Scope
 * Service APIs for “SimpleEdgeDiscovery” (see APIBacklog.md)  
-* It provides the developer with the ability to:  
+* It provides the API Consumer with the ability to:  
   * Discover the closest edge cloud zone to a given device..
   * NOTE: The scope of this API family should be limited (at least at the first stage) to 4G and 5G.  
 * Describe, develop, document, and test the APIs

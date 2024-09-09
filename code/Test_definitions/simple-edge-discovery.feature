@@ -31,7 +31,7 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
   Scenario: Error because the device cannot be identified
     Given the API Client makes a GET request to the {path_resource}
     When The device identifier(s) cannot be matched to a device
-    Then Response code is 404 DEVICE_NOT_FOUND
+    Then Response code is 422 UNIDENTIFIABLE_DEVICE
 
   @simple_edge_discovery_5_error_device_identifiers_mismatch
   Scenario: Error because provided device indentifiers are inconsistent

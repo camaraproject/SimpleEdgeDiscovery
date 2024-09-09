@@ -39,7 +39,10 @@ It contains the following changes compared to [r1.2 - rc](#r12---rc).
   - version in servers.url to v1
   - API Readiness checklist updated 
 
-Full Changelog: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.2...r1.3
+Detailed changelog from r1.3 to r1.2: : https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.2...r1.3
+
+The full Changelog of this public release from the last public release (r0.9.3 - rc) also includes
+the changes summarised in the following sections for [r1.2 - rc](#r12---rc) and [r1.1 - rc](#r11---rc).
 
 # r1.2 - rc
 

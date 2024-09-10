@@ -1,24 +1,3 @@
-#/*- ---license-start
-#* CAMARA Project
-#* ---
-#* Copyright (C) 2022 - 2023 Contributors | Deutsche Telekom AG to CAMARA a Series of LF Projects, LLC
-#* The contributor of this file confirms his sign-off for the
-#* Developer Certificate of Origin (http://developercertificate.org).
-#* ---
-#* Licensed under the Apache License, Version 2.0 (the "License");
-#* you may not use this file except in compliance with the License.
-#* You may obtain a copy of the License at
-#*
-#*      http://www.apache.org/licenses/LICENSE-2.0
-#*
-#* Unless required by applicable law or agreed to in writing, software
-#* distributed under the License is distributed on an "AS IS" BASIS,
-#* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#* See the License for the specific language governing permissions and
-#* limitations under the License.
-#* ---license-end
-#*/
-
 Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
 
   Background:
@@ -52,7 +31,7 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
   Scenario: Error because the device cannot be identified
     Given the API Client makes a GET request to the {path_resource}
     When The device identifier(s) cannot be matched to a device
-    Then Response code is 404 DEVICE_NOT_FOUND
+    Then Response code is 422 UNIDENTIFIABLE_DEVICE
 
   @simple_edge_discovery_5_error_device_identifiers_mismatch
   Scenario: Error because provided device indentifiers are inconsistent
@@ -72,7 +51,7 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
     When The identified device is not connected to an edge-supporting network
     Then Response code is 422 DEVICE_NOT_APPLICABLE
 
-  @simple_edge_discovery_6_error_operator_cannot_resolve
+  @simple_edge_discovery_8_error_operator_cannot_resolve
   Scenario: Internal error at operator
     Given the API Client makes a GET request to the {path_resource}
     When The operator is unable to resolve due to internal error

@@ -11,7 +11,7 @@ Repository to describe, develop, document, and test the SimpleEdgeDiscovery API 
 
 ## Scope
 * Service APIs for “SimpleEdgeDiscovery” (see APIBacklog.md)  
-* It provides the customer with the ability to:  
+* It provides the API Consumer with the ability to:  
   * Discover the closest edge cloud zone to a given device..
   * NOTE: The scope of this API family should be limited (at least at the first stage) to 4G and 5G.  
 * Describe, develop, document, and test the APIs
@@ -19,8 +19,10 @@ Repository to describe, develop, document, and test the SimpleEdgeDiscovery API 
 
 ## Release Information
 <!-- Use/uncomment one or multiple the following options -->
+The latest public release is available here: https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest
+
 Pre-releases of this sub project are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
-<!-- The latest public release is available here: https://github.com/camaraproject/§repo_name§/releases/latest -->
+
 For changes see [CHANGELOG.md](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/CHANGELOG.md)
 
 ## Contributing

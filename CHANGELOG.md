@@ -4,7 +4,8 @@ NOTE:
 
 ## Table of contents
 
-- **[r1.2 - rc](#r12---rc)**
+- [r1.3](#r13)
+- [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)
 - [r0.9.3 - rc](#r093---rc)
 - [r0.8.1](#r081)
@@ -21,6 +22,48 @@ The below sections record the changes for each API version in each (pre-)release
 
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
+
+# r1.3
+
+This release contains the definition and documentation of
+* simple-edge-discovery v1.0.0, a stable public release.
+
+The API definition(s) are based on
+* Commonalities v0.4.0
+* Identity and Consent Management v0.2.0
+
+It contains the following changes compared to last public release [r0.9.3 - rc](#r093---rc):
+
+### Added
+  - Gherkin `.feature` file in Test_definitions
+  - Implementation of ICM consent guidelines
+  - Addition of `x-camara-commonalities` object to YAML
+  - Documentation: added warning about use of `networkAccessIdentifier`, added User Story
+
+### Changed
+  - info.version to 1.0.0
+  - version in servers.url to v1
+  - Changed `mecplatforms` to  `EdgeCloudZones` in alignment with EdgeCloud API family 
+  - Compliance with DeviceIdentifier schema
+  - The device identifier may now be available from a 3-legged access token 
+  - Change of `X-Correlator` to `x-correlator`
+  - `Operation` tag now follows agreed syntax
+  - Error model alignment, including device identifier-related errors
+  - Documentation: updated the API Readiness Checklist
+  - Documentation: clarified distinction between device/server usage of the SimpleEdgeDiscovery API
+  - Documentation: replaced term 'MNO' with 'network operator'
+  - Documentation: updated section on authentication and authorisation
+
+### Removed
+  - UUID format constraint from x-correlator 
+  - 405 Method Not Allowed error response
+  - Removed example for `networkAccessIdentifier`
+
+### Fixed
+  - Trailiing whitespace issues in YAML
+
+
+ Changelog from r1.3 to r1.2 only: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.2...r1.3
 
 # r1.2 - rc
 
@@ -41,7 +84,7 @@ It contains the following corrections compared to [r1.1 - rc](#r11---rc).
   - documentation: replaced term 'MNO' with 'network operator'
   - documentation: updated section on authentication and authorisation
 
-Full Changelog: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.1...r1.2  
+Full Changelog: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.1...r1.2
 
 
 # r1.1 - rc

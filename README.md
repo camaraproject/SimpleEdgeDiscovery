@@ -7,12 +7,12 @@
 <a href="https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest" title="Latest Release"><img src="https://img.shields.io/github/release/camaraproject/SimpleEdgeDiscovery?style=plastic"></a>
 
 # SimpleEdgeDiscovery
-Repository to describe, develop, document, and test the SimpleEdgeDiscovery API (as part of the EdgeCloud API Family)
+Repository to describe, develop, document, and test the SimpleEdgeDiscovery API as part of the EdgeCloud API Family
 
 ## Scope
 * Service APIs for “SimpleEdgeDiscovery” (see APIBacklog.md)  
 * It provides the API Consumer with the ability to:  
-  * Discover the closest edge cloud zone to a given device..
+  * Discover the closest edge cloud zone to a given device.
   * NOTE: The scope of this API family should be limited (at least at the first stage) to 4G and 5G.  
 * Describe, develop, document, and test the APIs
 * Started: June 2022 (as part of https://github.com/camaraproject/EdgeCloud/)
@@ -31,5 +31,5 @@ For changes see [CHANGELOG.md](https://github.com/camaraproject/SimpleEdgeDiscov
     * Schedule: Tuesdays 16h-17 CET, every two weeks.
     * Minutes: Access [meeting minutes](https://wiki.camaraproject.org/display/CAM/EdgeCloud+Meeting+Minutes).
 * Mailing List
-    * Subscribe / Unsubscribe to the mailing list of this Sub Project [https://lists.camaraproject.org/g/sp-simple-edge-discovery](https://lists.camaraproject.org/g/sp-simple-edge-discovery).
-    * A message to the community of this Sub Project can be sent using [sp-simple-edge-discovery@lists.camaraproject.org](sp-simple-edge-discovery@lists.camaraproject.org).
+    * Subscribe / Unsubscribe to the mailing list of this Sub Project [https://lists.camaraproject.org/g/sp-edc](https://lists.camaraproject.org/g/sp-edc).
+    * A message to the community of this Sub Project can be sent using [sp-edc@lists.camaraproject.org](sp-edc@lists.camaraproject.org).

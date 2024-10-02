@@ -2,5 +2,5 @@
 | -----------------------| ------------------------------------------| -----------------------|
 | 5GFF / Vodafone | Kevin Smith | Kevsy |
 | Telefonica | Cristina Santana Casillas | crissancas |
-| Capgemini Engineering | Javier Loza Lluco | javierlozallu |
+| Telefonica | Jose Manuel Conde Gomez | JoseMConde |
 | 5GFF / Verizon | Mahesh Chapalamadugu | maheshc01 |

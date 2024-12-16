@@ -407,11 +407,10 @@ paths:
     device identified in the request.
 
 components:
- securitySchemes:
-  openId:
-   description: OpenID Provider Configuration Information.
-   type: openIdConnect
-   openIdConnectUrl: .well-known/openid-configuration
+  securitySchemes:
+    openId:
+      type: openIdConnect
+      openIdConnectUrl: https://example.com/.well-known/openid-configuration
 
  headers:
   x-correlator:

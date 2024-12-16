@@ -254,7 +254,7 @@ externalDocs:
  url: https://github.com/camaraproject/EdgeCloud
 
 servers:
- - url: "{apiRoot}/simple-edge-discovery/v1"
+ - url: "{apiRoot}/simple-edge-discovery/vwip"
    variables:
     apiRoot:
      default: https://localhost:9091

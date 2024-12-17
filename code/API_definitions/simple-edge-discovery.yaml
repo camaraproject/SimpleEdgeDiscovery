@@ -49,7 +49,7 @@ info:
 
   The API returns the closest Edge Cloud Zone to a given device, so that
   device needs to be identifiable by the network. This can be achieved either
-  by passing a device identifier in the request header, or, from the 
+  by passing a device identifier in the request header, or, from the
   three-legged access token where implemented by the operator.
 
   ## Passing a device identifier in the request header
@@ -114,13 +114,13 @@ info:
 
   ## Identifying the device from the access token
 
-  This API requires the API consumer to identify a device as the subject of 
+  This API requires the API consumer to identify a device as the subject of
   the API as follows:
 
   - When the API is invoked using a two-legged access token, the subject will be
   identified from the optional [`device` object | `phoneNumber` field](*), which
   therefore MUST be provided.
-  - When a three-legged access token is used however, this optional identifier 
+  - When a three-legged access token is used however, this optional identifier
   MUST NOT be provided, as the subject will be uniquely identified from the access
   token.
 
@@ -131,7 +131,7 @@ info:
   ## Error handling:
 
   - If the subject cannot be identified from the access token and the optional `device`
-  object is not included in the request, then the server will return an error with the 
+  object is not included in the request, then the server will return an error with the
   `422 MISSING_IDENTIFIER` error code.
 
   - If the subject can be identified from the access token and the optional `device`

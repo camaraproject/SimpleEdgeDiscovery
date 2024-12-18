@@ -470,7 +470,8 @@ components:
      description: Friendly Code to describe the error
 
   PhoneNumber:
-   description: A public identifier addressing a telephone subscription. In
+   description:
+    A public identifier addressing a telephone subscription. In
     mobile networks it corresponds to the MSISDN (Mobile Station
     International Subscriber Directory Number). In order to be globally
     unique it has to be formatted in international format, according to
@@ -480,7 +481,8 @@ components:
    example: "+123456789"
 
   NetworkAccessIdentifier:
-   description: A public identifier addressing a subscription in a mobile
+   description:
+    A public identifier addressing a subscription in a mobile
     network. In 3GPP terminology, it corresponds to the GPSI formatted with
     the External Identifier ({Local Identifier}@{Domain Identifier}).
     Unlike the telephone number, the network access identifier is not

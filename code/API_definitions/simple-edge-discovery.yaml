@@ -655,9 +655,9 @@ components:
           status:
            enum:
             - 406
-           code:
-            enum:
-             - NOT_ACCEPTABLE
+          code:
+           enum:
+            - NOT_ACCEPTABLE
      examples:
       GENERIC_406_NOT_ACCEPTABLE:
        description: API Server does not accept the media type (`Accept-*` header) indicated by API client

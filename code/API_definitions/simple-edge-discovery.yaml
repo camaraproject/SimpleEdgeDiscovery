@@ -529,7 +529,6 @@ components:
            enum:
             - INVALID_ARGUMENT
             - OUT_OF_RANGE
-            - "{{SPECIFIC_CODE}}"
          examples:
           GENERIC_400_INVALID_ARGUMENT:
            description: Invalid Argument. Generic Syntax Exception
@@ -543,122 +542,102 @@ components:
             status: 400
             code: OUT_OF_RANGE
             message: Client specified an invalid range.
-          GENERIC_400_{{SPECIFIC_CODE}}:
-           description: Specific Syntax Exception regarding a field that is relevant in the context of the API
-           value:
-            status: 400
-            code: { { SPECIFIC_CODE } }
-            message: { { SPECIFIC_CODE_MESSAGE } }
   Generic401:
    description: Unauthorized
    headers:
-      x-correlator:
-         $ref: "#/components/headers/x-correlator"
+    x-correlator:
+     $ref: "#/components/headers/x-correlator"
    content:
-      application/json:
-         schema:
-            allOf:
-               - $ref: "#/components/schemas/ErrorInfo"
-               - type: object
-                 properties:
-                    status:
-                       enum:
-                          - 401
-                    code:
-                       enum:
-                          - UNAUTHENTICATED
-                          - AUTHENTICATION_REQUIRED
-         examples:
-            GENERIC_401_UNAUTHENTICATED:
-               description: Request cannot be authenticated
-               value:
-                  status: 401
-                  code: UNAUTHENTICATED
-                  message: Request not authenticated due to missing, invalid, or expired credentials.
-            GENERIC_401_AUTHENTICATION_REQUIRED:
-               description: New authentication is needed, authentication is no longer valid
-               value:
-                  status: 401
-                  code: AUTHENTICATION_REQUIRED
-                  message: New authentication is required.
+    application/json:
+     schema:
+      allOf:
+       - $ref: "#/components/schemas/ErrorInfo"
+       - type: object
+         properties:
+          status:
+           enum:
+            - 401
+          code:
+           enum:
+            - UNAUTHENTICATED
+            - AUTHENTICATION_REQUIRED
+     examples:
+      GENERIC_401_UNAUTHENTICATED:
+       description: Request cannot be authenticated
+       value:
+        status: 401
+        code: UNAUTHENTICATED
+        message: Request not authenticated due to missing, invalid, or expired credentials.
+      GENERIC_401_AUTHENTICATION_REQUIRED:
+       description: New authentication is needed, authentication is no longer valid
+       value:
+        status: 401
+        code: AUTHENTICATION_REQUIRED
+        message: New authentication is required.
   Generic403:
    description: Forbidden
    headers:
-      x-correlator:
-         $ref: "#/components/headers/x-correlator"
+    x-correlator:
+     $ref: "#/components/headers/x-correlator"
    content:
-      application/json:
-         schema:
-            allOf:
-               - $ref: "#/components/schemas/ErrorInfo"
-               - type: object
-                 properties:
-                    status:
-                       enum:
-                          - 403
-                    code:
-                       enum:
-                          - PERMISSION_DENIED
-                          - INVALID_TOKEN_CONTEXT
-                          - "{{SPECIFIC_CODE}}"
-         examples:
-            GENERIC_403_PERMISSION_DENIED:
-               description: Permission denied. OAuth2 token access does not have the required scope or when the user fails operational security
-               value:
-                  status: 403
-                  code: PERMISSION_DENIED
-                  message: Client does not have sufficient permissions to perform this action.
-            GENERIC_403_INVALID_TOKEN_CONTEXT:
-               description: Reflect some inconsistency between information in some field of the API and the related OAuth2 Token
-               value:
-                  status: 403
-                  code: INVALID_TOKEN_CONTEXT
-                  message: "{{field}} is not consistent with access token."
-            GENERIC_403_{{SPECIFIC_CODE}}:
-               description: Indicate a Business Logic condition that forbids a process not attached to a specific field in the context of the API
-               value:
-                  status: 403
-                  code: { { SPECIFIC_CODE } }
-                  message: { { SPECIFIC_CODE_MESSAGE } }
+    application/json:
+     schema:
+      allOf:
+       - $ref: "#/components/schemas/ErrorInfo"
+       - type: object
+         properties:
+          status:
+           enum:
+            - 403
+          code:
+           enum:
+            - PERMISSION_DENIED
+            - INVALID_TOKEN_CONTEXT
+     examples:
+      GENERIC_403_PERMISSION_DENIED:
+       description: Permission denied. OAuth2 token access does not have the required scope or when the user fails operational security
+       value:
+        status: 403
+        code: PERMISSION_DENIED
+        message: Client does not have sufficient permissions to perform this action.
+      GENERIC_403_INVALID_TOKEN_CONTEXT:
+       description: Reflect some inconsistency between information in some field of the API and the related OAuth2 Token
+       value:
+        status: 403
+        code: INVALID_TOKEN_CONTEXT
+        message: "{{field}} is not consistent with access token."
   Generic404:
    description: Not found
    headers:
-      x-correlator:
-         $ref: "#/components/headers/x-correlator"
+    x-correlator:
+     $ref: "#/components/headers/x-correlator"
    content:
-      application/json:
-         schema:
-            allOf:
-               - $ref: "#/components/schemas/ErrorInfo"
-               - type: object
-                 properties:
-                    status:
-                       enum:
-                          - 404
-                    code:
-                       enum:
-                          - NOT_FOUND
-                          - IDENTIFIER_NOT_FOUND
-                          - "{{SPECIFIC_CODE}}"
-         examples:
-            GENERIC_404_NOT_FOUND:
-               description: Resource is not found
-               value:
-                  status: 404
-                  code: NOT_FOUND
-                  message: The specified resource is not found.
-            GENERIC_404_IDENTIFIER_NOT_FOUND:
-               description: Some identifier cannot be matched to a device
-               value:
-                  status: 404
-                  code: IDENTIFIER_NOT_FOUND
-                  message: Device identifier not found.
-            GENERIC_404_{{SPECIFIC_CODE}}:
-               description: Specific situation to highlight the resource/concept not found
-               value:
-                  status: 404
-                  code: { { SPECIFIC_CODE } }
-                  message: { { SPECIFIC_CODE_MESSAGE } }
+    application/json:
+     schema:
+      allOf:
+       - $ref: "#/components/schemas/ErrorInfo"
+       - type: object
+         properties:
+          status:
+           enum:
+            - 404
+          code:
+           enum:
+            - NOT_FOUND
+            - IDENTIFIER_NOT_FOUND
+     examples:
+      GENERIC_404_NOT_FOUND:
+       description: Resource is not found
+       value:
+        status: 404
+        code: NOT_FOUND
+        message: The specified resource is not found.
+      GENERIC_404_IDENTIFIER_NOT_FOUND:
+       description: Some identifier cannot be matched to a device
+       value:
+        status: 404
+        code: IDENTIFIER_NOT_FOUND
+        message: Device identifier not found.
   Generic406:
    description: Not Acceptable
    headers:
@@ -713,7 +692,7 @@ components:
    description: Unprocessable Content
    headers:
     x-correlator:
-     $ref: "#/components/headers/x-correlator"   
+     $ref: "#/components/headers/x-correlator"
    content:
     application/json:
      schema:
@@ -726,81 +705,76 @@ components:
         code: IDENTIFIER_MISMATCH
         message: Provided identifiers are not consistent.
       GENERIC_422_SERVICE_NOT_APPLICABLE:
-       description: Service not applicable for the provided identifier
+       description: Service is not available for the provided device
        value:
         status: 422
         code: SERVICE_NOT_APPLICABLE
-        message: The service is not available for the provided identifier.
+        message: The Service is not available for the provided device.
       GENERIC_422_MISSING_IDENTIFIER:
-       description: An identifier is not included in the request and the device or phone
+       description:
+        An identifier is not included in the request and the device or phone
         number identificationinformation cannot be derived from the 3-legged access token
        value:
         status: 422
         code: MISSING_IDENTIFIER
         message: The device cannot be identified.
-      GENERIC_422_UNNECESSARY_IDENTIFIER:
-       description: An explicit identifier is provided when a device or phone number has already been identified from the access token
-       value:
-        status: 422
-        code: UNNECESSARY_IDENTIFIER
-        message: The device is already identified by the access token.        
   Generic429:
    description: Too Many Requests
    headers:
-     x-correlator:
-       $ref: "#/components/headers/x-correlator"
+    x-correlator:
+     $ref: "#/components/headers/x-correlator"
    content:
-     application/json:
-       schema:
-         allOf:
-           - $ref: "#/components/schemas/ErrorInfo"
-           - type: object
-             properties:
-               status:
-                 enum:
-                   - 429
-               code:
-                 enum:
-                   - QUOTA_EXCEEDED
-                   - TOO_MANY_REQUESTS
-       examples:
-         GENERIC_429_QUOTA_EXCEEDED:
-           description: Request is rejected due to exceeding a business quota limit
-           value:
-             status: 429
-             code: QUOTA_EXCEEDED
-             message: Either out of resource quota or reaching rate limiting.
-         GENERIC_429_TOO_MANY_REQUESTS:
-           description: API Server request limit is overpassed
-           value:
-             status: 429
-             code: TOO_MANY_REQUESTS
-             message: Either out of resource quota or reaching rate limiting.
+    application/json:
+     schema:
+      allOf:
+       - $ref: "#/components/schemas/ErrorInfo"
+       - type: object
+         properties:
+          status:
+           enum:
+            - 429
+          code:
+           enum:
+            - QUOTA_EXCEEDED
+            - TOO_MANY_REQUESTS
+     examples:
+      GENERIC_429_QUOTA_EXCEEDED:
+       description: Request is rejected due to exceeding a business quota limit
+       value:
+        status: 429
+        code: QUOTA_EXCEEDED
+        message: Either out of resource quota or reaching rate limiting.
+      GENERIC_429_TOO_MANY_REQUESTS:
+       description: API Server request limit is overpassed
+       value:
+        status: 429
+        code: TOO_MANY_REQUESTS
+        message: Either out of resource quota or reaching rate limiting.
   Generic500:
    description: Internal Server Error
    headers:
-     x-correlator:
-       $ref: "#/components/headers/x-correlator"
+    x-correlator:
+     $ref: "#/components/headers/x-correlator"
    content:
-     application/json:
-       schema:
-         allOf:
-           - $ref: "#/components/schemas/ErrorInfo"
-           - type: object
-             properties:
-               status:
-                 enum:
-                   - 500
-               code:
-                 enum:
-                   - INTERNAL
-       examples:
-         GENERIC_500_INTERNAL:
-           description: Problem in Server side. Regular Server Exception
-           value:
-             status: 500
-             code: INTERNAL
-             message: Unknown server error. Typically a server bug.
+    application/json:
+     schema:
+      allOf:
+       - $ref: "#/components/schemas/ErrorInfo"
+       - type: object
+         properties:
+          status:
+           enum:
+            - 500
+          code:
+           enum:
+            - INTERNAL
+     examples:
+      GENERIC_500_INTERNAL:
+       description: Problem in Server side. Regular Server Exception
+       value:
+        status: 500
+        code: INTERNAL
+        message: Unknown server error. Typically a server bug.
   Generic501:
    description: Not Implemented
    headers:
@@ -827,30 +801,30 @@ components:
          code: NOT_IMPLEMENTED
          message: This functionality is not implemented yet.
   Generic502:
-    description: Bad Gateway
-    headers:
-     x-correlator:
-      $ref: "#/components/headers/x-correlator"
-    content:
-     application/json:
-      schema:
-       allOf:
-        - $ref: "#/components/schemas/ErrorInfo"
-        - type: object
-          properties:
-           status:
+   description: Bad Gateway
+   headers:
+    x-correlator:
+     $ref: "#/components/headers/x-correlator"
+   content:
+    application/json:
+     schema:
+      allOf:
+       - $ref: "#/components/schemas/ErrorInfo"
+       - type: object
+         properties:
+          status:
+           enum:
+            - 502
+           code:
             enum:
-             - 502
-            code:
-             enum:
              - BAD_GATEWAY
-          examples:
-           GENERIC_502_BAD_GATEWAY:
-            description: Internal routing problem in the Server side that blocks to manage the service properly
-            value:
-             status: 502
-             code: BAD_GATEWAY
-          message: An upstream internal service cannot be reached.
+         examples:
+          GENERIC_502_BAD_GATEWAY:
+           description: Internal routing problem in the Server side that blocks to manage the service properly
+           value:
+            status: 502
+            code: BAD_GATEWAY
+         message: An upstream internal service cannot be reached.
   Generic503:
    description: Service Unavailable
    headers:

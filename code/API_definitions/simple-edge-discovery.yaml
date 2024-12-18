@@ -529,19 +529,19 @@ components:
            enum:
             - INVALID_ARGUMENT
             - OUT_OF_RANGE
-         examples:
-          GENERIC_400_INVALID_ARGUMENT:
-           description: Invalid Argument. Generic Syntax Exception
-           value:
-            status: 400
-            code: INVALID_ARGUMENT
-            message: Client specified an invalid argument, request body or query param.
-          GENERIC_400_OUT_OF_RANGE:
-           description: Out of Range. Specific Syntax Exception used when a given field has a pre-defined range or a invalid filter criteria combination is requested
-           value:
-            status: 400
-            code: OUT_OF_RANGE
-            message: Client specified an invalid range.
+     examples:
+      GENERIC_400_INVALID_ARGUMENT:
+       description: Invalid Argument. Generic Syntax Exception
+       value:
+        status: 400
+        code: INVALID_ARGUMENT
+        message: Client specified an invalid argument, request body or query param.
+      GENERIC_400_OUT_OF_RANGE:
+       description: Out of Range. Specific Syntax Exception used when a given field has a pre-defined range or a invalid filter criteria combination is requested
+       value:
+        status: 400
+        code: OUT_OF_RANGE
+        message: Client specified an invalid range.
   Generic401:
    description: Unauthorized
    headers:

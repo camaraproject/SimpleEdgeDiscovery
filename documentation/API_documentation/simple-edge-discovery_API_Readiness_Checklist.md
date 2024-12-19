@@ -1,6 +1,6 @@
 # API Readiness Checklist
 
-Checklist for simple-edge-discovery v1.0 in r1.3
+Checklist for simple-edge-discovery v1.1.0-alpha.1
 
 | Nr | API release assets  | alpha | release-candidate |  initial<br>public | stable<br> public | Status | Comments |
 |----|----------------------------------------------|:-----:|:-----------------:|:-------:|:------:|:----:|:----:|
@@ -15,6 +15,6 @@ Checklist for simple-edge-discovery v1.0 in r1.3
 |  9 | Test result statement                        |   O   |         O         |    O    |    M   |  N   | Fall24 EXCEPTION: Test results not available (*) |
 | 10 | API release numbering convention applied     |   M   |         M         |    M    |    M   |  Y   |      |
 | 11 | Change log updated                           |   M   |         M         |    M    |    M   |  Y   | [link](/CHANGELOG.md) |
-| 12 | Previous public release was certified        |   O   |         O         |    O    |    M   |  Y   | [link](https://www.open-gateway.com)     |
+| 12 | Previous public release was certified        |   O   |         O         |    O    |    M   |  Y   | see (1)     |
 
-(*) If you encounter issues with the provided test files (.feature), please create an issue in the API Sub-Project to signal these issues so they can be fixed in a patch release.
+(1) Certified comapnies can be found at the [GSMA Open Gateway Portal](https://www.open-gateway.com)

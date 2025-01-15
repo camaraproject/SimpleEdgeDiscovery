@@ -4,7 +4,7 @@ NOTE:
 
 ## Table of contents
 
-- [v1.1.0-alpha.1](#v110---alpha1)
+- [v1.1.0-rc.1](#v110---rc1)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)
@@ -20,14 +20,12 @@ The below sections record the changes for each API version in each (pre-)release
 * for subsequent alpha or release-candidate API versions, the delta with respect to the previous pre-release
 * for a public API version, the consolidated changes since the release of the previous public API version
 
-
-
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
 
-# v1.1.0-alpha.1
+# v1.1.0-rc.1
 
-This alpha pre-release contains the definition and documentation of
-* simple-edge-discovery v1.1.0-alpha.1
+This release candidate contains the definition and documentation of
+* simple-edge-discovery v1.1.0-rc.1
 
 The API definition(s) are based on
 * Commonalities 0.5.0-alpha.1 (r2.1)
@@ -38,11 +36,14 @@ It contains the following changes compared to the last public release [r1.3](#r1
 ### Changed
 All changes are to align with Commonalities 0.5.0-alpha.1
 * Error names and structures updated
+* removed `406` and `5xx` errors
 * `security` component updated
 * `x-camara-commonalities` version updated
+* Device identifier pupdates
 * Template text for identifying devices updated
 * Test guidelines updated to incorporate changed errrors.
 * New API Readiness checklist used and updated
+* For more details see [Scope for Spring 25 CAMAAR meta release](https://github.com/camaraproject/SimpleEdgeDiscovery/issues/53)
 
 # r1.3
 

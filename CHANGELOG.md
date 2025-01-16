@@ -34,7 +34,7 @@ The API definition(s) are based on
 It contains the following changes compared to the last public release [r1.3](#r13)
 
 ### Changed
-All changes are to align with Commonalities 0.5.0-alpha.1
+All changes are to align with Commonalities 0.5.0-alpha.1, as captured in PR #61 
 * Error names and structures updated
 * removed `406` and `5xx` errors
 * `security` component updated

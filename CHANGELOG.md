@@ -25,7 +25,7 @@ NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previousl
 # r2.1 - rc
 
 This release candidate contains the definition and documentation of
-* simple-edge-discovery v1.1.0-r2.1
+* simple-edge-discovery v1.1.0-rc.1
 
 The API definition(s) are based on
 * Commonalities 0.5.0-alpha.1 (r2.1)

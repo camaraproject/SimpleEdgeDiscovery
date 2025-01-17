@@ -4,7 +4,7 @@ NOTE:
 
 ## Table of contents
 
-- [v1.1.0-r2.1](#v110---r21)
+- [r2.1 - rc](r21---rc)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)

@@ -43,7 +43,7 @@ All changes are to align with Commonalities 0.5.0-alpha.1, as captured in PR #61
 * Template text for identifying devices updated
 * Test guidelines updated to incorporate changed errrors.
 * New API Readiness checklist used and updated
-* For more details see [Scope for Spring 25 CAMAAR meta release](https://github.com/camaraproject/SimpleEdgeDiscovery/issues/53)
+* For more details see [Scope for Spring 25 CAMARA meta release](https://github.com/camaraproject/SimpleEdgeDiscovery/issues/53)
 
 # r1.3
 

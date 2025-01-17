@@ -22,7 +22,7 @@ The below sections record the changes for each API version in each (pre-)release
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
 
-# v1.1.0-r2.1
+# r2.1 - rc
 
 This release candidate contains the definition and documentation of
 * simple-edge-discovery v1.1.0-r2.1

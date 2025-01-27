@@ -34,16 +34,21 @@ The API definition(s) are based on
 It contains the following changes compared to the last public release [r1.3](#r13)
 
 ### Changed
-All changes are to align with Commonalities 0.5.0-alpha.1, as captured in PR #61 
-* Error names and structures updated
-* removed `406` and `5xx` errors
-* `security` component updated
-* `x-camara-commonalities` version updated
-* Device identifier updates
-* Template text for identifying devices updated
-* Test guidelines updated to incorporate changed errrors.
-* New API Readiness checklist used and updated
-* For more details see [Scope for Spring 25 CAMARA meta release](https://github.com/camaraproject/SimpleEdgeDiscovery/issues/53)
+Most changes are to align with Commonalities 0.5.0-rc.1 , specifically:
+
+- [x] [Normalization of error status and code allowed values using `enum`](https://github.com/camaraproject/Commonalities/pull/316)
+- [x] [Security scheme added to CAMARA_common.yaml](https://github.com/camaraproject/Commonalities/pull/335)
+- [x] [Guidelines on the coverage of error codes](https://github.com/camaraproject/Commonalities/pull/343)
+- [x] [changed `info.description` template for device / phone number identifiers](https://github.com/camaraproject/Commonalities/pull/346)
+- [x] [mandatory error `status` and alignment of error codes related to identifiers](https://github.com/camaraproject/Commonalities/pull/351)
+- [x] [Changed guidelines on `x-camara-commonalities` extension field](https://github.com/camaraproject/Commonalities/pull/375)
+- [x] [Note on support for networkAccessIdentifier](https://github.com/camaraproject/Commonalities/pull/379)
+- [x] [Common artifacts for testing error scenarios for device and phoneNumber](https://github.com/camaraproject/Commonalities/pull/386)
+- [x] [String pattern added to x-correlator scheme](https://github.com/camaraproject/Commonalities/pull/387)
+- [x] [Updated message field and description for Error 429](https://github.com/camaraproject/Commonalities/pull/390)
+  
+* The related issues are listed in [Scope for Spring 25 CAMARA meta release](https://github.com/camaraproject/SimpleEdgeDiscovery/issues/53)
+  as well as a few minor bug fix issues relating to error codes.
 
 # r1.3
 

@@ -323,6 +323,7 @@ paths:
         any valid value. Recommendation is to use UUID for values.
       schema:
        type: string
+       pattern: ^[a-zA-Z0-9-]{0,55}$
 
    responses:
     "200":

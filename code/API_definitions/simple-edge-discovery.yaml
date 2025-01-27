@@ -645,11 +645,11 @@ components:
                       - 422
                   code:
                     enum:
-                     - IDENTIFIER_MISMATCH
-                     - SERVICE_NOT_APPLICABLE
-                     - MISSING_IDENTIFIER
-                     - UNSUPPORTED_IDENTIFIER
-                     - UNNECESSARY_IDENTIFIER
+                      - IDENTIFIER_MISMATCH
+                      - SERVICE_NOT_APPLICABLE
+                      - MISSING_IDENTIFIER
+                      - UNSUPPORTED_IDENTIFIER
+                      - UNNECESSARY_IDENTIFIER
           examples:
             GENERIC_422_IDENTIFIER_MISMATCH:
               description: Inconsistency between identifiers not pointing to the same device

@@ -47,6 +47,7 @@ Most changes are to align with Commonalities 0.5.0-rc.1 , specifically:
 - [x] [Common artifacts for testing error scenarios for device and phoneNumber](https://github.com/camaraproject/Commonalities/pull/386)
 - [x] [String pattern added to x-correlator scheme](https://github.com/camaraproject/Commonalities/pull/387)
 - [x] [Updated message field and description for Error 429](https://github.com/camaraproject/Commonalities/pull/390)
+- [ ] [info.description template review](https://github.com/camaraproject/IdentityAndConsentManagement/pull/214)
   
 * The related issues are listed in [Scope for Spring 25 CAMARA meta release](https://github.com/camaraproject/SimpleEdgeDiscovery/issues/53)
   as well as a few minor bug fix issues relating to error codes.

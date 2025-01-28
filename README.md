@@ -23,7 +23,7 @@ The latest public release is available here: https://github.com/camaraproject/Si
 
 Pre-releases of this sub project are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
 
-For changes see [CHANGELOG.md](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/CHANGELOG.md)
+For changes see [CHANGELOG.md](/CHANGELOG.md)
 
 ## Contributing
 * Meetings (as part of EdgeCloud API Family)

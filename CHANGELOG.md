@@ -4,7 +4,6 @@ NOTE:
 
 ## Table of contents
 
-- [r2.1 - rc](r21---rc)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)
@@ -23,40 +22,6 @@ The below sections record the changes for each API version in each release as fo
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API family, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
 
-# r2.1 - rc
-
-This release candidate contains the definition and documentation of
-* simple-edge-discovery v1.1.0-rc.1
-
-The API definition(s) are based on
-* Commonalities 0.5.0-alpha.1 (r2.1)
-* Identity and Consent Management v0.3.0-alpha.1 (r2.1)
-
-It contains the following changes compared to the last public release [r1.3](#r13)
-
-### Added
-
-- [x] [Add description for security component #63](issues/63)
-
-### Changed
-
-- [x] [x-camara-commonalities needs updating to 0.5.0 #52](issues/52)
-- [x] [Update security component #55](issues/55)
-- [x] [Error and status code alignment #56](issues/56)
-- [x] [Device identifier updates #57](issues/57)
-- [x] [Enhancements and alignments in errors #58](issues/58)
-- [x] [Align API-Testing-Guidelines with new Enhancements and Alignments in Errors #59](issues/59)
-- [x] [Align with API Design Guidelines for device identification #60](issues/60)
-- [x] [x-camara-commonalities version should be 0.5 #64](issues/64)
-- [x] [Support zero-length x-correlator #67](issues/67)
-- [x] [429 error text needs to be updated to match Commonalities #68](issues/68)
-- [x] [Update support for networkAccessIdentifier #69](issues/69)
-- [x] [Update ICM documentation in info.description #73](issues/73)
-      
-### Removed
-
-- [x] [Remove 406 and 5xx errors #62](issues/62)
-  
 # r1.3
 
 This release contains the definition and documentation of

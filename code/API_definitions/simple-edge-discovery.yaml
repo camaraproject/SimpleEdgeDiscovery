@@ -393,7 +393,7 @@ components:
          Recommendation is to use UUID for values.
       required: false
       schema:
-        type: string
+        type: ^[a-zA-Z0-9-]{0,55}$
 
   schemas:
     EdgeCloudZones:

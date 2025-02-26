@@ -298,7 +298,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/EdgeCloudZone"
         "400":
-          $ref: "#/components/responses/Generic401"          
+          $ref: "#/components/responses/Generic401"
         "401":
           $ref: "#/components/responses/Generic401"
         "403":
@@ -391,14 +391,14 @@ components:
         code:
           type: string
           description: Friendly Code to describe the error
-          
+
     RequestBody:
       description: Common request body to allow optional Device object to be passed
       type: object
       properties:
         device:
           $ref: "#/components/schemas/Device"
-          
+
     Device:
       description: |
         End-user equipment able to connect to a mobile network. Examples of devices include smartphones or IoT sensors/actuators.
@@ -427,13 +427,13 @@ components:
       type: string
       pattern: '^\+[1-9][0-9]{4,14}$'
       example: "+123456789"
-      
+
     NetworkAccessIdentifier:
       description: |
         A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator.
       type: string
       example: "123456789@domain.com"
-      
+
     DeviceIpv4Addr:
       type: object
       description: |
@@ -459,20 +459,20 @@ components:
           "publicAddress": "84.125.93.10",
           "publicPort": 59765
         }
-        
+
     DeviceIpv6Address:
       description: |
         The device should be identified by the observed IPv6 address, or by any single IPv6 address from within the subnet allocated to the device (e.g. adding ::0 to the /64 prefix).
       type: string
       format: ipv6
       example: 2001:db8:85a3:8d3:1319:8a2e:370:7344
-      
+
     SingleIpv4Addr:
       description: A single IPv4 address with no subnet mask
       type: string
       format: ipv4
       example: "84.125.93.10"
-      
+
     Port:
       description: TCP or UDP port number
       type: integer

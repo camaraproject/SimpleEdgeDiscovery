@@ -40,10 +40,10 @@ info:
     The API may be called either by an application client hosted on a device
     attached to the operator network (i.e. phone, tablet), or by a server.
 
-    There is a single API endpoint: POST `/retrieve-closest-edge-cloud-zone`.
-    To call this endpoint, the API consumer must first obtain a valid OAuth2
-    token from the token endpoint, and pass it as an `Authorization` header
-    in the API request.
+    There is a single API endpoint: `/edge-cloud-zones?filter=closest`. To call
+    this endpoint, the API consumer must first obtain a valid OAuth2 token from
+    the token endpoint, and pass it as an `Authorization` header in the API
+    request.
 
     # Identifying the device
 
@@ -81,6 +81,36 @@ info:
     CAMARA does not currently allow its use. After the CAMARA meta-release work
     is concluded and the relevant issues are resolved, its use will need to be
     explicitly documented in the guidelines.
+
+    ### Example requests:
+
+    Examples for all API clients:
+    ```
+      GET /edge-cloud-zones?filter=closest HTTP/1.1
+      Host: example.com
+      Accept: application/json
+      IPv4-Address: 84.125.93.10
+
+      GET /edge-cloud-zones?filter=closest HTTP/1.1
+      Host: example.com
+      Accept: application/json
+      Phone-Number: +441234567890
+    ```
+    Example where the network operator requires the public port to be passed:
+    ```
+      GET /edge-cloud-zones?filter=closest HTTP/1.1
+      Host: example.com
+      Accept: application/json
+      IPv4-Address: 84.125.93.10
+      Public-port: 1234
+    ```
+
+    Example where API client is on a network-attached device:
+    ```
+      GET /edge-cloud-zones?filter=closest HTTP/1.1
+      Host: example.com
+      Accept: application/json
+    ```
 
     ## Identifying the device from the access token
 
@@ -225,8 +255,21 @@ paths:
         - openId:
             - simple-edge-discovery:edge-cloud-zones:read
       operationId: readClosestEdgeCloudZone
+      parameters:
+        - name: x-correlator
+          in: header
+          required: false
+          description: |
+            When the API Consumer includes the "x-correlator" header in the
+            request, the API provider must include it in the response with
+            the same value that was used in the request. Otherwise, it is
+            optional to include the "x-correlator" header in the response with
+             any valid value. Recommendation is to use UUID for values.
+          schema:
+            type: string
+            pattern: ^[a-zA-Z0-9-]{0,55}$
       requestBody:
-        description: Values required to calculate the closest Edge Cloud Zone
+        description: Parameters to create a new session
         required: true
         content:
           application/json:
@@ -242,34 +285,20 @@ paths:
               Identify Device By Multiple Identifiers:
                 $ref: '#/components/examples/IdentifyDeviceByMultipleIdentifiers'
 
-      parameters:
-        - name: x-correlator
-          in: header
-          required: false
-          description: |
-            When the API Consumer includes the "x-correlator" header in the
-            request, the API provider must include it in the response with
-            the same value that was used in the request. Otherwise, it is
-            optional to include the "x-correlator" header in the response with
-             any valid value. Recommendation is to use UUID for values.
-          schema:
-            type: string
-            pattern: ^[a-zA-Z0-9-]{0,55}$
-
       responses:
         "200":
           description: |
             Successful response, returning the closest Edge Cloud
-            Zone to the user device identified in the request header.
+            Zone to the user device identified in the request.
           headers:
             x-correlator:
               $ref: "#/components/headers/x-correlator"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/EdgeCloudZones"
+                $ref: "#/components/schemas/EdgeCloudZone"
         "400":
-          $ref: "#/components/responses/Generic400"
+          $ref: "#/components/responses/Generic401"          
         "401":
           $ref: "#/components/responses/Generic401"
         "403":
@@ -280,6 +309,7 @@ paths:
           $ref: "#/components/responses/Generic422"
         "429":
           $ref: "#/components/responses/Generic429"
+
       tags:
         - Discovery
       summary: |
@@ -311,18 +341,6 @@ components:
         pattern: ^[a-zA-Z0-9-]{0,55}$
 
   schemas:
-    EdgeCloudZones:
-      type: array
-      items:
-        $ref: "#/components/schemas/EdgeCloudZone"
-      minItems: 1
-      maxItems: 1
-      description: |
-        A collection of Edge Cloud Zones. For this Simple Edge
-        Discovery API the collection will have at most one member (the closest
-        Edge Cloud Zone to the user device indicated in the request).
-      additionalProperties: false
-
     EdgeCloudZone:
       type: object
       description: |
@@ -344,20 +362,17 @@ components:
       type: string
       format: uuid
       additionalProperties: false
-      example: "123456789"
 
     EdgeCloudZoneName:
       description: |
         Edge Cloud Zone Name - the common name for the Edge Cloud Zone.
       type: string
       additionalProperties: false
-      example: "Europe-West-Dublin-1"
 
     EdgeCloudProvider:
       description: |
         The company name of the Edge Cloud Zone provider.
       type: string
-      example: "Example Edge Provider"
 
     ErrorInfo:
       type: object
@@ -376,54 +391,14 @@ components:
         code:
           type: string
           description: Friendly Code to describe the error
-
-    PhoneNumber:
-      description: A public identifier addressing a telephone subscription. In
-        mobile networks it corresponds to the MSISDN (Mobile Station
-        International Subscriber Directory Number). In order to be globally
-        unique it has to be formatted in international format, according to
-        E.164 standard, prefixed with '+'.
-      type: string
-      pattern: '^\+[1-9][0-9]{4,14}$'
-      example: "+123456789"
-
-    NetworkAccessIdentifier:
-      description: A public identifier addressing a subscription in a mobile
-        network. In 3GPP terminology, it corresponds to the GPSI formatted with
-        the External Identifier ({Local Identifier}@{Domain Identifier}).
-        Unlike the telephone number, the network access identifier is not
-        subjected to portability ruling in force, and is individually managed
-        by each operator.
-      type: string
-      example: "123456789@domain.com"
-
-    DeviceIpv4Addr:
-      description: A single IPv4 address with no subnet mask
-      type: string
-      format: ipv4
-      example: "84.125.93.10"
-
-    DeviceIpv6Address:
-      description: The device should be identified by the observed IPv6
-        address, or by any single IPv6 address from within the subnet allocated
-        to the device (e.g.adding ::0 to the /64 prefix).
-      type: string
-      format: ipv6
-      example: "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-
-    Port:
-      description: TCP or UDP port number
-      type: integer
-      minimum: 0
-      maximum: 65535
-
+          
     RequestBody:
       description: Common request body to allow optional Device object to be passed
       type: object
       properties:
         device:
           $ref: "#/components/schemas/Device"
-
+          
     Device:
       description: |
         End-user equipment able to connect to a mobile network. Examples of devices include smartphones or IoT sensors/actuators.
@@ -433,7 +408,7 @@ components:
         * `phoneNumber`
         * `networkAccessIdentifier`
         NOTE 1: the MNO might support only a subset of these options. The API invoker can provide multiple identifiers to be compatible across different MNOs. In this case the identifiers MUST belong to the same device.
-        NOTE 2: for the Commonalities release v0.5, we are enforcing that the networkAccessIdentifier is only part of the schema for future-proofing, and CAMARA does not currently allow its use. After the CAMARA meta-release work is concluded and the relevant issues are resolved, its use will need to be explicitly documented in the guidelines.
+        NOTE 2: for the Commonalities release v0.4, we are enforcing that the networkAccessIdentifier is only part of the schema for future-proofing, and CAMARA does not currently allow its use. After the CAMARA meta-release work is concluded and the relevant issues are resolved, its use will need to be explicitly documented in the guidelines.
       type: object
       properties:
         phoneNumber:
@@ -446,35 +421,63 @@ components:
           $ref: "#/components/schemas/DeviceIpv6Address"
       minProperties: 1
 
-  examples:
-    IdentifyDeviceBy3LeggedToken:
-      description: Empty JSON when device is identified by access token
-      value:
-        {}
+    PhoneNumber:
+      description: |
+        A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+'.
+      type: string
+      pattern: '^\+[1-9][0-9]{4,14}$'
+      example: "+123456789"
+      
+    NetworkAccessIdentifier:
+      description: |
+        A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator.
+      type: string
+      example: "123456789@domain.com"
+      
+    DeviceIpv4Addr:
+      type: object
+      description: |
+        The device should be identified by either the public (observed) IP address and port as seen by the application server, or the private (local) and any public (observed) IP addresses in use by the device (this information can be obtained by various means, for example from some DNS servers).
 
-    IdentifyDeviceByPhoneNumber:
-      description: Identifying device by phone number
-      value:
-        device:
-          phoneNumber: "+123456789"
+        If the allocated and observed IP addresses are the same (i.e. NAT is not in use) then  the same address should be specified for both publicAddress and privateAddress.
 
-    IdentifyDeviceByIPAddress:
-      description: Identifying device by IP address
-      value:
-        device:
-          ipv4Address:
-            publicAddress: "84.125.93.10"
-            publicPort: 59765
+        If NAT64 is in use, the device should be identified by its publicAddress and publicPort, or separately by its allocated IPv6 address (field ipv6Address of the Device object)
 
-    IdentifyDeviceByMultipleIdentifiers:
-      description: Identifying device by multiple device identifiers
-      value:
-        device:
-          phoneNumber: "+123456789"
-          ipv4Address:
-            publicAddress: "84.125.93.10"
-            publicPort: 59765
-          networkAccessIdentifier: "123456789@domain.com"
+        In all cases, publicAddress must be specified, along with at least one of either privateAddress or publicPort, dependent upon which is known. In general, mobile devices cannot be identified by their public IPv4 address alone.
+      properties:
+        publicAddress:
+          $ref: "#/components/schemas/SingleIpv4Addr"
+        privateAddress:
+          $ref: "#/components/schemas/SingleIpv4Addr"
+        publicPort:
+          $ref: "#/components/schemas/Port"
+      anyOf:
+        - required: [publicAddress, privateAddress]
+        - required: [publicAddress, publicPort]
+      example:
+        {
+          "publicAddress": "84.125.93.10",
+          "publicPort": 59765
+        }
+        
+    DeviceIpv6Address:
+      description: |
+        The device should be identified by the observed IPv6 address, or by any single IPv6 address from within the subnet allocated to the device (e.g. adding ::0 to the /64 prefix).
+      type: string
+      format: ipv6
+      example: 2001:db8:85a3:8d3:1319:8a2e:370:7344
+      
+    SingleIpv4Addr:
+      description: A single IPv4 address with no subnet mask
+      type: string
+      format: ipv4
+      example: "84.125.93.10"
+      
+    Port:
+      description: TCP or UDP port number
+      type: integer
+      minimum: 1024
+      maximum: 65535
 
   responses:
     Generic400:
@@ -690,3 +693,32 @@ components:
                 status: 429
                 code: TOO_MANY_REQUESTS
                 message: Rate limit reached.
+  examples:
+    IdentifyDeviceBy3LeggedToken:
+      description: Empty JSON when device is identified by access token
+      value:
+        {}
+
+    IdentifyDeviceByPhoneNumber:
+      description: Identifying device by phone number
+      value:
+        device:
+          phoneNumber: "+123456789"
+
+    IdentifyDeviceByIPAddress:
+      description: Identifying device by IP address
+      value:
+        device:
+          ipv4Address:
+            publicAddress: "84.125.93.10"
+            publicPort: 59765
+
+    IdentifyDeviceByMultipleIdentifiers:
+      description: Identifying device by multiple device identifiers
+      value:
+        device:
+          phoneNumber: "+123456789"
+          ipv4Address:
+            publicAddress: "84.125.93.10"
+            publicPort: 59765
+          networkAccessIdentifier: "123456789@domain.com"

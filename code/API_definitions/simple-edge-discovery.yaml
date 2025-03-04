@@ -42,8 +42,8 @@ info:
     The API may be called either by an application client hosted on a device
     attached to the operator network (i.e. phone, tablet), or by a server.
 
-    There is a single API endpoint: `/retrieve-closest-edge-cloud-zone`. 
-    
+    There is a single API endpoint: `/retrieve-closest-edge-cloud-zone`.
+
     To call this endpoint, the API consumer must first obtain a valid OAuth2 token
     from the token endpoint, and pass it as an `Authorization` header in the API
     request.

@@ -27,10 +27,12 @@ info:
     you may:
 
     * connect the application client on the user device to your application
-    server instance on that Edge Cloud Zone. Note: the address of that server
-    instance is not part of the API response, but should be known in advance.
+    server instance on that Edge Cloud Zone. Note: the IP address of that
+    application server instance is not part of the API response, so you will need
+    to map the edge cloud zone name to the server endpoint IP address you received
+    when you deployed the server via the cloud provider's API.
     * or, if you have no instance on that Edge Cloud Zone, you may wish to
-    deploy one there.
+    deploy one there using the cloud provider's APIs.
 
     Note: the provider of the Edge Cloud Zone may be an operator, or a cloud
     provider working in partnership with the operator.
@@ -40,36 +42,27 @@ info:
     The API may be called either by an application client hosted on a device
     attached to the operator network (i.e. phone, tablet), or by a server.
 
-    There is a single API endpoint: `/edge-cloud-zones?filter=closest`. To call
-    this endpoint, the API consumer must first obtain a valid OAuth2 token from
-    the token endpoint, and pass it as an `Authorization` header in the API
+    There is a single API endpoint: `/retrieve-closest-edge-cloud-zone`.
+
+    To call this endpoint, the API consumer must first obtain a valid OAuth2 token
+    from the token endpoint, and pass it as an `Authorization` header in the API
     request.
 
     # Identifying the device
 
     The API returns the closest Edge Cloud Zone to a given device, so that
     device needs to be identifiable by the network. This can be achieved either
-    by passing a device identifier in the request header, or, from the
+    by passing one or more device identifiers in the request, or, from the
     three-legged access token where implemented by the operator.
 
-    ## Passing a device identifier in the request header
+    ## Passing device identifier(s) in the request
+    At least one of the following device identifiers must be provided, unless
+    using a 3-legged access toekn (see next section):
+     - Phone number (i.e. MSISDN)
+     - Network Access Identifier assigned by the mobile network operator for the device
+     - IPv6 address
+     - IPv4 address
 
-    * If you call the API from a server, you must explicitly pass one or
-    more device identifiers in the HTTP request header:
-      * `IPv4-Address` or `IPv6-Address`. This is the public IP address of the
-      user device: this
-      can be obtained by an application hosted on that device calling a
-      public IP address API (e.g. GET https://api.ipify.org?format=json)
-      * If you provide an `IPv4-Address` or `IPv6-Address`: for certain
-      operators you may be required to also provide a `Public-port` header.
-      * `Phone-Number` . The international E.164 format (starting with country
-      code), e.g. +4407123123456
-      * `Network-Access-Identifier` (where available from the API host operator)
-
-    * If you call the API from a device attached to the operator network, then
-    you can attempt the request without passing device identifier(s) parameters
-    in the request header. If that returns a 422 `MISSING_IDENTIFIER`
-    error then retry the request but this time include a device identifier.
 
     NOTE1: the network operator might support only a subset of these options.
     The API invoker can provide multiple identifiers to be compatible across
@@ -82,35 +75,6 @@ info:
     is concluded and the relevant issues are resolved, its use will need to be
     explicitly documented in the guidelines.
 
-    ### Example requests:
-
-    Examples for all API clients:
-    ```
-      GET /edge-cloud-zones?filter=closest HTTP/1.1
-      Host: example.com
-      Accept: application/json
-      IPv4-Address: 84.125.93.10
-
-      GET /edge-cloud-zones?filter=closest HTTP/1.1
-      Host: example.com
-      Accept: application/json
-      Phone-Number: +441234567890
-    ```
-    Example where the network operator requires the public port to be passed:
-    ```
-      GET /edge-cloud-zones?filter=closest HTTP/1.1
-      Host: example.com
-      Accept: application/json
-      IPv4-Address: 84.125.93.10
-      Public-port: 1234
-    ```
-
-    Example where API client is on a network-attached device:
-    ```
-      GET /edge-cloud-zones?filter=closest HTTP/1.1
-      Host: example.com
-      Accept: application/json
-    ```
 
     ## Identifying the device from the access token
 
@@ -118,8 +82,7 @@ info:
     the API as follows:
 
     - When the API is invoked using a two-legged access token, the subject will be
-    identified from the optional [`device` object | `phoneNumber` field](*), which
-    therefore MUST be provided.
+    identified from the optional `device` object, which therefore MUST be provided.
     - When a three-legged access token is used however, this optional identifier
     MUST NOT be provided, as the subject will be uniquely identified from the access
     token.
@@ -178,27 +141,6 @@ info:
 
     # Notes for Simple Edge Discovery API publishers
 
-    If an `IPv4-Address` or `IPv6-Address` header parameter is provided then the
-    operator should
-    assume the request is coming from a developer's server rather than a device
-    attached to the network. In which case the developer server is expected to
-    have been provided with the device public IP address (e.g. by the
-    application client on that device signalling it back to the server).
-
-    If neither an `IPv4-Address`/`IPv6-Address` parameter, nor any other device
-    identifier,  is
-    provided in the API request header then the operator should assume the
-    request is from a device attached to their network, and attempt to use the
-    public IP source address to determine which packet gateway issued it (and
-    hence the closest edge to that gateway).
-
-    If no `IPv4-Address`/`IPv6-Address` header parameter is provided, but another
-    device
-    identifier(s) is provided, then the operator should assume the request is
-    coming from a device attached to their network and should make use of one
-    or both of the public IP source address (from the IP packet header) and the
-    device identifier(s) provided in the HTTPS request header.
-
     Should your implementation require the `Port` value to be passed in addition
     to the `IP-Address`, please make that explicit in the documentation, and
     utilise the `GENERIC_400_MISSING_PORT` error if the `Port` header is omitted.
@@ -223,7 +165,6 @@ info:
     transparency and user-centric privacy-by-design.
 
     # Further info and support
-
     ---
 
   license:

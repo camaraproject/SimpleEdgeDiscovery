@@ -140,13 +140,15 @@ info:
     with an explanation.
 
     ### Additional CAMARA error responses
-    The list of error codes in this API specification is not exhaustive. Therefore the API
-    specification may not document some non-mandatory error statuses as indicated in
-    `CAMARA API Design Guidelines`.
+    The list of error codes in this API specification is not exhaustive. Therefore
+    the API specification may not document some non-mandatory error statuses as 
+    indicated in `CAMARA API Design Guidelines`.
+    
+    Please refer to [CAMARA_common.yaml]({link_to_release}/CAMARA_common.yaml) for
+    a complete list of error responses.
 
-    Please refer to [CAMARA_common.yaml]({link_to_release}/CAMARA_common.yaml) for a complete list of error responses.
-
-    As a specific rule, error `501 - NOT_IMPLEMENTED` can be only a possible error response if it is explicitly documented in the API.    
+    As a specific rule, error `501 - NOT_IMPLEMENTED` can be only a possible error
+    response if it is explicitly documented in the API.
 
     # Notes for Simple Edge Discovery API publishers
 

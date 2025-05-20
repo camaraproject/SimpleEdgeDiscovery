@@ -141,9 +141,9 @@ info:
 
     ### Additional CAMARA error responses
     The list of error codes in this API specification is not exhaustive. Therefore
-    the API specification may not document some non-mandatory error statuses as 
+    the API specification may not document some non-mandatory error statuses as
     indicated in `CAMARA API Design Guidelines`.
-    
+
     Please refer to [CAMARA_common.yaml]({link_to_release}/CAMARA_common.yaml) for
     a complete list of error responses.
 

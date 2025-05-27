@@ -219,7 +219,7 @@ paths:
              any valid value. Recommendation is to use UUID for values.
           schema:
             type: string
-            pattern: ^[a-zA-Z0-9-]{0,55}$
+            pattern: ^[a-zA-Z0-9-_:;.\/<>{}]{0,256}$
       requestBody:
         description: Parameters to create a new session
         required: true
@@ -290,7 +290,7 @@ components:
       required: false
       schema:
         type: string
-        pattern: ^[a-zA-Z0-9-]{0,55}$
+        pattern: ^[a-zA-Z0-9-_:;.\/<>{}]{0,256}$
 
   schemas:
     EdgeCloudZone:

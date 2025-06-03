@@ -20,7 +20,7 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
     Given the API Client makes a GET request to the {path_resource}
     When The filter parameter is not 'closest'
     Then Response code is 400 OUT_OF_RANGE
-  
+
   @simple_edge_discovery_3_error_device_cannot_be_identified
   Scenario: Error because the device cannot be identified
     Given the API Client makes a GET request to the {path_resource}

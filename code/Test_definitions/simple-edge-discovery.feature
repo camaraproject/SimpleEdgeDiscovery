@@ -20,7 +20,7 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
     Given the API Client makes a GET request to the {path_resource}
     When The filter parameter is not 'closest'
     Then Response code is 400 OUT_OF_RANGE
-    
+
   @simple_edge_discovery_3_error_device_cannot_be_identified
   Scenario: Error because the device cannot be identified
     Given the API Client makes a GET request to the {path_resource}
@@ -31,7 +31,7 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
   Scenario: Error because the provided identifiers cannot be supported
     Given the API Client makes a GET request to the {path_resource}
     When The identifier(s) provided are not supported by the implementation
-    Then Response code is 422 UNSUPPORTED_IDENTIFIER    
+    Then Response code is 422 UNSUPPORTED_IDENTIFIER
 
   @simple_edge_discovery_5_error_device_identifiers_mismatch
   Scenario: Error because provided device indentifiers are inconsistent
@@ -44,13 +44,13 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
     Given the API Client makes a GET request to the {path_resource}
     When No identifier(s) are provided and cannot be derived from any 3-legged access token
     Then Response code is 422 MISSING_IDENTIFIER
-    
+
   @simple_edge_discovery_7_error_invalid_access_token_context
   Scenario: Error because access token context is invalid
     Given the API Client makes a GET request to the {path_resource}
     When The device identifiers are not consistent with access token
     Then Response code is 403 INVALID_TOKEN_CONTEXT
-    
+
   @simple_edge_discovery_8_error_service_not_applicable
   Scenario: Error because the device is not connected to an edge-supporting network
     Given the API Client makes a GET request to the {path_resource}

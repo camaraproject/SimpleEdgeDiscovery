@@ -1,0 +1,29 @@
+name: Caller for PR validation workflow
+# CAMARA Project - Github Action for Pull Reqests
+# This workflow calls the reusable workflow from the tooling repository
+# initial version
+
+on:
+  # Pull Requests to main
+  pull_request:
+    branches: main
+  # manual workflow triggering
+  workflow_dispatch:
+  
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: write
+  contents: write
+  issues: write
+
+jobs:
+  pr_validation:
+    uses: camaraproject/tooling/.github/workflows/pr_validation.yml@main
+    secrets: inherit
+# This workflow calls the reusable workflow from tooling repository
+# Tools configuration from the tooling repository branch indicated by `configurations` variable    
+#    with:
+#      configurations: staging

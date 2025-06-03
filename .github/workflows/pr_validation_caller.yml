@@ -25,5 +25,5 @@ jobs:
     secrets: inherit
 # This workflow calls the reusable workflow from tooling repository
 # Tools configuration from the tooling repository branch indicated by `configurations` variable    
-#    with:
-#      configurations: staging
+    with:
+      configurations: gherkinlint-update

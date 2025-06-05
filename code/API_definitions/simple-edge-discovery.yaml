@@ -3,7 +3,7 @@ openapi: 3.0.3
 info:
   title: Simple Edge Discovery
   version: wip
-  x-camara-commonalities: 0.5
+  x-camara-commonalities: 0.6
   description: |
     # Find the closest Edge Cloud Zone
     ---

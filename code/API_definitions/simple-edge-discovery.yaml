@@ -316,7 +316,7 @@ components:
         - edgeCloudZoneId
         - edgeCloudZoneName
         - edgeCloudProvider
-          
+
 
     EdgeCloudZoneId:
       description: |
@@ -360,7 +360,7 @@ components:
       properties:
         device:
           $ref: "#/components/schemas/Device"
-          
+
     DeviceResponse:
       description: |
         An identifier for the end-user equipment able to connect to the network that the response refers to. This parameter is only returned when the API consumer includes the `device` parameter in their request (i.e. they are using a two-legged access token), and is relevant when more than one device identifier is specified, as only one of those device identifiers is allowed in the response.
@@ -369,7 +369,7 @@ components:
 
       allOf:
         - $ref: "#/components/schemas/Device"
-        - maxProperties: 1          
+        - maxProperties: 1
 
     Device:
       description: |

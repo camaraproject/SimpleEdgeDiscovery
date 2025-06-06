@@ -1,6 +1,6 @@
 # API Readiness Checklist
 
-Checklist for simple-edge-discovery v1.1.0-alpha.1
+Checklist for simple-edge-discovery v1.0.0
 
 | Nr | API release assets  | alpha | release-candidate |  initial<br>public | stable<br> public | Status | Comments |
 |----|----------------------------------------------|:-----:|:-----------------:|:-------:|:------:|:----:|:----:|

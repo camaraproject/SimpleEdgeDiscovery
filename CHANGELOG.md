@@ -108,7 +108,7 @@ simple-edge-discovery v0.11.0-rc.1 is a new release candidate version with signi
 
 - API definition **with inline documentation**:
   - [View it on ReDoc](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r1.1/code/API_definitions/simple-edge-discovery.yaml&nocors)
-  - [View it on Swagger Editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r1.1/code/API_definitions/simple-edge-discovery.yaml)
+  - [View it on Swagger Editor](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r1.1/code/API_definitions/simple-edge-discovery.yaml)
   - OpenAPI [YAML spec file](https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r1.1/code/API_definitions/simple-edge-discovery.yaml)
  
 ### Added

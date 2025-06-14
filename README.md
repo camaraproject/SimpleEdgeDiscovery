@@ -8,7 +8,10 @@
 <a href="https://github.com/camaraproject/Governance/blob/main/ProjectStructureAndRoles.md" title="Incubating API Repository"><img src="https://img.shields.io/badge/Incubating%20API%20Repository-green?style=plastic"></a>
 
 # SimpleEdgeDiscovery
-Repository to describe, develop, document, and test the SimpleEdgeDiscovery API as part of the EdgeCloud API Family
+
+Incubating API Repository to evolve and maintain the definitions and documentation of SimpleEdgeDiscovery Service API(s) within the Sub Project [Edge Cloud](https://lf-camaraproject.atlassian.net/wiki/x/IwEpBQ)
+
+* API Repository [wiki page](https://lf-camaraproject.atlassian.net/wiki/x/QwCbBQ)
 
 ## Scope
 * Service APIs for “SimpleEdgeDiscovery” (see APIBacklog.md)  
@@ -16,10 +19,10 @@ Repository to describe, develop, document, and test the SimpleEdgeDiscovery API 
   * Discover the closest edge cloud zone to a given device.
   * NOTE: The scope of this API family should be limited (at least at the first stage) to 4G and 5G.  
 * Describe, develop, document, and test the APIs
-* Started: June 2022 (as part of https://github.com/camaraproject/EdgeCloud/)
+* Started: June 2022 (as part of [EdgeCloud](https://github.com/camaraproject/EdgeCloud/))
 
 ## Release Information
-<!-- Use/uncomment one or multiple the following options -->
+
 The latest public release is available here: https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest
 
 Pre-releases of this sub project are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
@@ -27,7 +30,7 @@ Pre-releases of this sub project are available in https://github.com/camaraproje
 For changes see [CHANGELOG.md](/CHANGELOG.md)
 
 ## Contributing
-* Meetings (as part of EdgeCloud API Family)
+* Meetings (as part of Edge Cloud Sub Project)
     * [Registration/Join](https://zoom-lfx.platform.linuxfoundation.org/meeting/94237809115?password=05fb6d8a-a913-47d8-b003-db75ecdaa5d9)
     * Schedule: Tuesdays 16h-17 CET, every two weeks.
     * Minutes: Access [meeting minutes](https://wiki.camaraproject.org/display/CAM/EdgeCloud+Meeting+Minutes).

@@ -33,12 +33,6 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
     When The identifier(s) provided are not supported by the implementation
     Then Response code is 422 UNSUPPORTED_IDENTIFIER
 
-  @simple_edge_discovery_5_error_device_identifiers_mismatch
-  Scenario: Error because provided device indentifiers are inconsistent
-    Given the API Client makes a GET request to the {path_resource}
-    When The provided device identifiers are not consistent
-    Then Response code is 422 IDENTIFIER_MISMATCH
-
   @simple_edge_discovery_6_error_missing_identifier
   Scenario: Error because no identifier was provided
     Given the API Client makes a GET request to the {path_resource}

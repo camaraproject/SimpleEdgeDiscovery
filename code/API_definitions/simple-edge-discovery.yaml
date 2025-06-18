@@ -441,7 +441,7 @@ components:
             required:
               - EdgeCloudZone
             allOf:
-              - $ref: "#/components/schemas/EdgeCloudZone"            
+              - $ref: "#/components/schemas/EdgeCloudZone"
               - $ref: "#/components/schemas/DeviceResponse"
           examples:
             Closest Edge Cloud details:
@@ -453,9 +453,9 @@ components:
                 edgeCloudProvider: "Example Provider"
             Closest Edge Cloud plus device identifier:
               description: The closest Edge Cloud Zone has been identifed and
-                its ID, name and provider are listed, along with the optional 
-                Device Identifer if it was passed in the request body. If more 
-                that one Device Identifier was passed then only the value that 
+                its ID, name and provider are listed, along with the optional
+                Device Identifer if it was passed in the request body. If more
+                that one Device Identifier was passed then only the value that
                 was used by the operator to fulfil the request is included.
               value:
                 edgeCloudZoneId: "MNO-123-456"

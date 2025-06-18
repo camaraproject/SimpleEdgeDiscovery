@@ -445,13 +445,11 @@ components:
               - $ref: "#/components/schemas/DeviceResponse"
           examples:
             Closest Edge Cloud details:
-              description: The closest Edge Cloud Zone is returned
               value:
                 edgeCloudZoneId: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
                 edgeCloudZoneName: "UK-SOUTH"
                 edgeCloudProvider: "Example Provider"
             Closest Edge Cloud plus device identifier:
-              description: Closest Edge Cloud Zone with device identifier
               value:
                 edgeCloudZoneId: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
                 edgeCloudZoneName: "UK-SOUTH"

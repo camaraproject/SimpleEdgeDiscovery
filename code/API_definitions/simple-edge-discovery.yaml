@@ -208,18 +208,12 @@ paths:
             - simple-edge-discovery:edge-cloud-zones:read
       operationId: readClosestEdgeCloudZone
       parameters:
-        - name: x-correlator
-          in: header
+        - in: header
+          name: x-correlator
+          description: Correlation id for the different services
           required: false
-          description: |
-            When the API Consumer includes the "x-correlator" header in the
-            request, the API provider must include it in the response with
-            the same value that was used in the request. Otherwise, it is
-            optional to include the "x-correlator" header in the response with
-             any valid value. Recommendation is to use UUID for values.
           schema:
-            type: string
-            pattern: ^[a-zA-Z0-9-_:;.\/<>{}]{0,256}$
+            $ref: "#/components/schemas/XCorrelator"
       requestBody:
         description: Parameters to create a new session
         required: true
@@ -284,17 +278,10 @@ components:
 
   headers:
     x-correlator:
-      description: |
-        When the API Consumer includes the "x-correlator" header in the request,
-         the API provider must include it in the response with the same value t
-         hat was used in the request. Otherwise, it is optional to include the
-         "x-correlator" header in the response with any valid value.
-         Recommendation is to use UUID for values.
+      description: Correlation id for the different services
       required: false
       schema:
-        type: string
-        pattern: ^[a-zA-Z0-9-_:;.\/<>{}]{0,256}$
-
+        $ref: "#/components/schemas/XCorrelator"
   schemas:
     EdgeCloudZone:
       type: object
@@ -450,6 +437,11 @@ components:
       type: integer
       minimum: 1024
       maximum: 65535
+
+    XCorrelator:
+      type: string
+      pattern: ^[a-zA-Z0-9-_:;.\/<>{}]{0,256}$
+      example: "b4333c46-49c0-4f62-80d7-f0ef930f1c46"
 
   responses:
     Generic400:

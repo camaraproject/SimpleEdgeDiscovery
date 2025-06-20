@@ -233,19 +233,7 @@ paths:
 
       responses:
         "200":
-          description: |
-            Successful response, returning the closest Edge Cloud
-            Zone to the user device identified in the request. If one
-            or more device identifier(s) were provided in the request
-            body, then the device identifier used to fulfil the request
-            is also returned.
-          headers:
-            x-correlator:
-              $ref: "#/components/headers/x-correlator"
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/EdgeCloudZone"
+          $ref: "#/components/responses/200Success"
         "400":
           $ref: "#/components/responses/Generic401"
         "401":
@@ -297,8 +285,6 @@ components:
           $ref: "#/components/schemas/EdgeCloudZoneName"
         edgeCloudProvider:
           $ref: "#/components/schemas/EdgeCloudProvider"
-        device:
-          $ref: "#/components/schemas/DeviceResponse"
       required:
         - edgeCloudZoneId
         - edgeCloudZoneName
@@ -443,7 +429,52 @@ components:
       pattern: ^[a-zA-Z0-9-_:;.\/<>{}]{0,256}$
       example: "b4333c46-49c0-4f62-80d7-f0ef930f1c46"
 
+    DeviceResponseBody:
+      description: |
+        The optional device identifier to include in the response
+      properties:
+        device:
+          description: |
+            The device identifier that was used to fulfil the request.
+            If this property is not present then the device
+            identifier sent in the request was used.
+          allOf:
+            - $ref: "#/components/schemas/DeviceResponse"
+            - example: {"phoneNumber": "+123456789"}
+
   responses:
+    200Success:
+      description: 200 OK
+      headers:
+        x-correlator:
+          $ref: "#/components/headers/x-correlator"
+      content:
+        application/json:
+          schema:
+            required:
+              - edgeCloudZoneId
+              - edgeCloudZoneName
+              - edgeCloudProvider
+            allOf:
+              - $ref: "#/components/schemas/EdgeCloudZone"
+              - $ref: "#/components/schemas/DeviceResponseBody"
+          examples:
+            Closest Edge Cloud details:
+              description: The details of the closest Edge Cloud Zone
+              value:
+                edgeCloudZoneId: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+                edgeCloudZoneName: "UK-SOUTH"
+                edgeCloudProvider: "Example Provider"
+            Closest Edge Cloud plus device identifier:
+              description: The details of the closest Edge Cloud Zone
+                and the device identifier used to fulfill the request
+              value:
+                edgeCloudZoneId: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+                edgeCloudZoneName: "UK-SOUTH"
+                edgeCloudProvider: "Example Provider"
+                device:
+                  phoneNumber: "+123456789"
+
     Generic400:
       description: Bad Request
       headers:

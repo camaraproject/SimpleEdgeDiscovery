@@ -19,7 +19,7 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
     And the 200Success object includes the EdgeCloudZone object defined at "#/components/schemas/EdgeCloudZone"
     And the 200Success object omits the optional DeviceResponseBody object defined at "DeviceResponseBody"
 
- @simple_edge_discovery_success_scenario_02_device_identifier_in_request_body
+  @simple_edge_discovery_success_scenario_02_device_identifier_in_request_body
   Scenario: Successful request with the device identified by the device identifier passed in the request body
     Given the device is identified by the device identifier passed in the request body
     When the request "readClosestEdgeCloudZone" is sent

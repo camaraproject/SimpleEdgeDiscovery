@@ -4,6 +4,7 @@ NOTE:
 
 ## Table of contents
 
+- [r2.1 - rc](#r21---rc)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)
@@ -21,6 +22,50 @@ The below sections record the changes for each API version in each release as fo
 * for a public release, the consolidated changes since the previous public release
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API Sub Project, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
+
+# r2.1 - rc
+
+This release candidate contains the definition and documentation of
+* [simple-edge-discovery v2.0.0-rc.1]()
+
+The API definition(s) are based on
+* Commonalities v0.6.0-rc.1 (r3.2)
+* Identity and Consent Management  v0.4.0-rc.1 (r3.2) 
+
+It contains the **following breaking changes** compared to the last public release [r1.3](#r13):
+
+* The API's single operation has been refactored from GET to POST
+* The operation resource URI has changed from `/edge-cloud-zones?filter=closest` to `/retrieve-closest-edge-cloud-zone`
+* One or more device identifiers must be passed either via a 3-legged access token or in the request body.
+
+- API definition with inline documentation:
+  - [View it on ReDoc](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.1/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  - [View it on Swagger Editor](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.1/code/API_definitions/simple-edge-discovery.yaml)
+  - [OpenAPI YAML spec file](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.1/code/API_definitions/simple-edge-discovery.yaml)
+
+### Added
+
+- [x] [Added DeviceResponse object #86](issues/86)
+- [x] [Added section to documentation on non-documented errors #87](issues/87)
+- [x] [Added Gherkin linter #95](issues/95)
+
+### Changed
+
+- [x] [Refactored discovery operation from GET to POST #74](issues/74)
+- [x] [Updated User Story to reflect change from GET to POST #119](issues/119)
+- [x] [Updated Gherkin `.feature` test scenarios to reflect change from GET to POST #79](issues/79)
+- [x] [Refactored the operation's `200 OK` response to a `$ref` #76](issues/76)
+- [x] [Refactored `x-correlator` schema to be a `$ref` and not defined inline #115](issues/115)
+- [x] [Updated `x-correlator` pattern #88](issues/88)
+- [x] [Updated `x-camara-commonalities` version to `0.6` #99](issues/99)
+- [x] [Updated Gherkin `.feature` to test for a valid `x-correlator` #111](issues/111)
+      
+### Removed
+
+- [x] [Removed `401 AUTHENTICATION REQUIRED` error #84](issues/84)
+- [x] [Removed `422 IDENTIFIER MISMATCH` error #85](issues/85) 
+  
+
 
 # r1.3
 

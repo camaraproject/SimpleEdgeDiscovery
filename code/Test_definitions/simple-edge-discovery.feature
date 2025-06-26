@@ -1,4 +1,4 @@
-Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
+Feature: CAMARA Simple Edge Discovery API, v2.0.0-rc.1 - Operation readClosestEdgeCloudZone
 
   Background:
     Given an environment at "apiRoot"

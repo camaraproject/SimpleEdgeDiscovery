@@ -46,18 +46,18 @@ It contains the **following breaking changes** compared to the last public relea
 ### Added
 
 - [x] fix: added DeviceResponse object by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/102
-- [x] fix: added section on non-documented errors by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/87
+- [x] fix: added section on non-documented errors by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/92
 
 ### Changed
 
-- [x] refactor!: move discovery operation from GET to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/78
+- [x] refactor!: changed discovery operation method from GET to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/78
 - [x] docs: updated examples and usage description following refactoring to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/81
-- [x] test: changed .feature tests to use POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/79
-- [x] fix: make operation's 200 OK response a ref by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/76
-- [x] fix: x-correlator changed to be a $ref to a schema object and not defined inline by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/115 
-- [x] fix: updated x-correlator pattern by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/88 
-- [x] fix: updated x-camara-commonalities to 0.6 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/99 
-- [x] test: Gherkin .feature updated to test for valid x-correlator by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/111 
+- [x] refactor!: feature file updated to reflect change from GET to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/118
+- [x] fix: updated 200 OK Response to a schema object by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/117
+- [x] fix: changed XCorrelator to an object and added resulting $refs by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/116 
+- [x] fix: updated x-correlator pattern by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/93 
+- [x] fix: updated x-camara-commonalities to 0.6 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/101 
+- [x] test: updated x-correlator in .feature to assert compliance with common schema by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/114 
       
 ### Removed
 

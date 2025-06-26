@@ -45,25 +45,24 @@ It contains the **following breaking changes** compared to the last public relea
 
 ### Added
 
-- [x] [Added DeviceResponse object #86](issues/86)
-- [x] [Added section to documentation on non-documented errors #87](issues/87)
-- [x] [Added Gherkin linter #95](issues/95)
+- [x] [Added DeviceResponse object #86](issues/86), [Pull Request #102](/pull/102)
+- [x] [Added section to documentation on non-documented errors #87](issues/87), [Pull Request #102](/pull/112)
 
 ### Changed
 
-- [x] [Refactored discovery operation from GET to POST #74](issues/74)
-- [x] [Updated User Story to reflect change from GET to POST #119](issues/119)
+- [x] [Refactored the API operation from GET to POST](issues/74), [Pull Request #78](/pull/78)
+- [x] [Updated examples and usage description following refactoring to POST](/issues/75), [Pull Request #81](/pull/81)  
 - [x] [Updated Gherkin `.feature` test scenarios to reflect change from GET to POST #79](issues/79)
 - [x] [Refactored the operation's `200 OK` response to a `$ref` #76](issues/76)
 - [x] [Refactored `x-correlator` schema to be a `$ref` and not defined inline #115](issues/115)
-- [x] [Updated `x-correlator` pattern #88](issues/88)
+- [x] [Updated `x-correlator` pattern #88](issues/88), [Pull Request #88](/pull/88)
 - [x] [Updated `x-camara-commonalities` version to `0.6` #99](issues/99)
 - [x] [Updated Gherkin `.feature` to test for a valid `x-correlator` #111](issues/111)
       
 ### Removed
 
-- [x] [Removed `401 AUTHENTICATION REQUIRED` error #84](issues/84)
-- [x] [Removed `422 IDENTIFIER MISMATCH` error #85](issues/85) 
+- [x] [Removed `401 AUTHENTICATION REQUIRED` error #84](issues/84), [Pull Request #90](/pull/90)
+- [x] [Removed `422 IDENTIFIER MISMATCH` error #85](issues/85), [Pull Request #89](/pull/89) 
   
 
 

@@ -45,25 +45,24 @@ It contains the **following breaking changes** compared to the last public relea
 
 ### Added
 
-- [x] [Added DeviceResponse object #86](issues/86), Pull Request [#102](/pull/102)
-- [x] [Added section to documentation on non-documented errors #87](issues/87), Pull Request [#102](/pull/112)
+- [x] fix: added DeviceResponse object by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/102
+- [x] fix: added section on non-documented errors by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/87
 
 ### Changed
 
-- [x] [Refactored the API operation from GET to POST](issues/74) Pull Request [#78](/pull/78)
-- [x] [Updated examples and usage description following refactoring to POST](/issues/75), Pull Request [#81](/pull/81)  
-- [x] [Updated Gherkin `.feature` test scenarios to reflect change from GET to POST #79](issues/79)
-- [x] [Refactored the operation's `200 OK` response to a `$ref` #76](issues/76)
-- [x] [Refactored `x-correlator` schema to be a `$ref` and not defined inline #115](issues/115)
-- [x] [Updated `x-correlator` pattern #88](issues/88), Pull Request [#88](/pull/88)
-- [x] [Updated `x-camara-commonalities` version to `0.6` #99](issues/99)
-- [x] [Updated Gherkin `.feature` to test for a valid `x-correlator` #111](issues/111)
+- [x] refactor!: move discovery operation from GET to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/78
+- [x] docs: updated examples and usage description following refactoring to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/81
+- [x] test: changed .feature tests to use POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/79
+- [x] fix: make operation's 200 OK response a ref by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/76
+- [x] fix: x-correlator changed to be a $ref to a schema object and not defined inline by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/115 
+- [x] fix: updated x-correlator pattern by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/88 
+- [x] fix: updated x-camara-commonalities to 0.6 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/99 
+- [x] test: Gherkin .feature updated to test for valid x-correlator by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/111 
       
 ### Removed
 
-- [x] [Removed `401 AUTHENTICATION REQUIRED` error #84](issues/84), Pull Request [#90](/pull/90)
-- [x] [Removed `422 IDENTIFIER MISMATCH` error #85](issues/85), Pull Request [#89](/pull/89) 
-  
+- [x] fix: removed 401 AUTHENTICATION_REQUIRED by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/90 
+- [x] fix: removed 422 IDENTIFIER MISMATCH by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/89 
 
 
 # r1.3

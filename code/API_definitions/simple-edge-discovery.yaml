@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
   title: Simple Edge Discovery
-  version: wip
+  version: 2.0.0-rc.1
   x-camara-commonalities: 0.6
   description: |
     # Find the closest Edge Cloud Zone
@@ -187,7 +187,7 @@ externalDocs:
   url: https://github.com/camaraproject/EdgeCloud
 
 servers:
-  - url: "{apiRoot}/simple-edge-discovery/vwip"
+  - url: "{apiRoot}/simple-edge-discovery/v2rc1"
     variables:
       apiRoot:
         default: https://localhost:9091

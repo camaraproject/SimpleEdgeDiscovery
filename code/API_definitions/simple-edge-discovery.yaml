@@ -207,7 +207,7 @@ paths:
     post:
       security:
         - openId:
-            - simple-edge-discovery:edge-cloud-zones:read
+            - simple-edge-discovery:read
       operationId: readClosestEdgeCloudZone
       parameters:
         - in: header

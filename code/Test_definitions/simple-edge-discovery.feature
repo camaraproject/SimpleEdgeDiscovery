@@ -63,6 +63,6 @@ Feature: CAMARA Simple Edge Discovery API, v2.0.0-rc.1 - Operation readClosestEd
   @simple_edge_discovery_error_scenario_06_operator_cannot_resolve
   Scenario: Internal error at operator
     Given the request "readClosestEdgeCloudZone" is sent
-    And the device has been succesfully identified
+    And the device has been successfully identified
     When the operator is unable to resolve due to internal error
     Then the response code is 500 INTERNAL

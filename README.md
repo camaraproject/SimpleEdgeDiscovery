@@ -23,11 +23,17 @@ Incubating API Repository to evolve and maintain the definitions and documentati
 
 ## Release Information
 
-The latest public release is available here: https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest
+* Note: Please be aware that the project will have frequent updates to the main branch. There are no compatibility guarantees associated with code in any branch, including main, until a new release is created. For example, changes may be reverted before a release is created. **For best results, use the latest public release**.
 
-Pre-releases of this sub project are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
+* **The latest public release candidate is [r2.1 - rc](https://github.com/camaraproject/QualityOnDemand/releases/tag/r2.2), with the following API version:**
 
-For changes see [CHANGELOG.md](/CHANGELOG.md)
+  * **simple-edge-discovery v2.0.0-rc.1**  
+  [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.1/code/API_definitions/simple-edge-discovery.yaml)
+  [[View it on ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.1/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  [[View it on Swagger Editor]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.1/code/API_definitions/simple-edge-discovery.yaml)
+  
+* Previous releases and pre-releases are available [here](https://github.com/camaraproject/SimpleEdgeDiscovery/releases) 
+* For changes see [CHANGELOG.md](/CHANGELOG.md)
 
 ## Contributing
 * Meetings (as part of Edge Cloud Sub Project)

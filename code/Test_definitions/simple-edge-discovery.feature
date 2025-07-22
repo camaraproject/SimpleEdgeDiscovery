@@ -1,8 +1,8 @@
-Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
+Feature: CAMARA Simple Edge Discovery API, v2.0.0-rc.1 - Operation readClosestEdgeCloudZone
 
   Background:
     Given an environment at "apiRoot"
-    And the resource "/simple-edge-discovery/vwip/retrieve-closest-edge-cloud-zone"                                                |
+    And the resource "/simple-edge-discovery/v2rc1/retrieve-closest-edge-cloud-zone"                                                |
     And the header "Content-Type" is set to "application/json"
     And the header "Authorization" is set to a valid access token
     And the header "x-correlator" complies with the schema at "#/components/schemas/XCorrelator"
@@ -63,6 +63,6 @@ Feature: CAMARA Simple Edge Discovery API - Operation readClosestEdgeCloudZone
   @simple_edge_discovery_error_scenario_06_operator_cannot_resolve
   Scenario: Internal error at operator
     Given the request "readClosestEdgeCloudZone" is sent
-    And the device has been succesfully identified
+    And the device has been successfully identified
     When the operator is unable to resolve due to internal error
     Then the response code is 500 INTERNAL

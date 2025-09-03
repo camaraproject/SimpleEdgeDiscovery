@@ -317,7 +317,7 @@ components:
       required:
         - status
         - code
-        - code
+        - message
       properties:
         status:
           type: integer

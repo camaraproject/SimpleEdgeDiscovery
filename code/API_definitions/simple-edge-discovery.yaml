@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
   title: Simple Edge Discovery
-  version: wip
+  version: 2.0.0
   x-camara-commonalities: 0.6
   description: |
     # Find the closest Edge Cloud Zone
@@ -20,7 +20,7 @@ info:
     physical (GPS) location of a user device is not a reliable way to determine
     the closest Edge Cloud Zone, due to the way operator networks are routed -
     so the operator will calculate the Edge Cloud Zone with the
-    _shortest network path_to the network-attached device identified in the API
+    _shortest network path_ to the network-attached device identified in the API
     request.
 
     Once you have the name of the closest Edge Cloud Zone to the user device,
@@ -57,7 +57,7 @@ info:
 
     ## Passing device identifier(s) in the request
     At least one of the following device identifiers must be provided, unless
-    using a 3-legged access toekn (see next section):
+    using a 3-legged access token (see next section):
      - Phone number (i.e. MSISDN)
      - Network Access Identifier assigned by the mobile network operator for the device
      - IPv6 address
@@ -189,7 +189,7 @@ externalDocs:
   url: https://github.com/camaraproject/EdgeCloud
 
 servers:
-  - url: "{apiRoot}/simple-edge-discovery/vwip"
+  - url: "{apiRoot}/simple-edge-discovery/v2"
     variables:
       apiRoot:
         default: https://localhost:9091

@@ -25,12 +25,12 @@ Incubating API Repository to evolve and maintain the definitions and documentati
 
 * Note: Please be aware that the project will have frequent updates to the main branch. There are no compatibility guarantees associated with code in any branch, including main, until a new release is created. For example, changes may be reverted before a release is created. **For best results, use the latest public release**.
 
-* **The latest pre-release is [r2.1 - rc](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r2.1), with the following API version:**
+* **NEW: public release [r2.2](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r2.2) is available, with the following API version:**
 
-  * **simple-edge-discovery v2.0.0-rc.1**  
-  [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.1/code/API_definitions/simple-edge-discovery.yaml)
-  [[View it on ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.1/code/API_definitions/simple-edge-discovery.yaml&nocors)
-  [[View it on Swagger Editor]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.1/code/API_definitions/simple-edge-discovery.yaml)
+  * **simple-edge-discovery v2.0.0**  
+  [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.2/code/API_definitions/simple-edge-discovery.yaml)
+  [[View it on ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  [[View it on Swagger Editor]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml)
   
 * Previous releases and pre-releases are available [here](https://github.com/camaraproject/SimpleEdgeDiscovery/releases) 
 * For changes see [CHANGELOG.md](/CHANGELOG.md)

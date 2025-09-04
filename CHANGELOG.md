@@ -4,6 +4,7 @@ NOTE:
 
 ## Table of contents
 
+- [r2.2](#r22)
 - [r2.1 - rc](#r21---rc)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
@@ -22,6 +23,48 @@ The below sections record the changes for each API version in each release as fo
 * for a public release, the consolidated changes since the previous public release
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API Sub Project, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
+
+# r2.2 (Fall25 public release)
+
+This public release contains the definition and documentation of
+* simple-edge-discovery v2.0.0
+
+The API definition(s) are based on
+* Commonalities v0.6.0 (r3.3)
+* Identity and Consent Management v0.4.0 (r3.3) 
+
+It contains the **following breaking changes** compared to the last public release [r1.3](#r13):
+
+* The API's single operation has been refactored from GET to POST
+* The operation resource URI has changed from `/edge-cloud-zones?filter=closest` to `/retrieve-closest-edge-cloud-zone`
+* One or more device identifiers must be passed either via a 3-legged access token or in the request body.
+
+- API definition with inline documentation:
+  - [View it on ReDoc](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  - [View it on Swagger Editor](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml)
+  - [OpenAPI YAML spec file](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.2/code/API_definitions/simple-edge-discovery.yaml)
+
+### Added
+
+- [x] fix: added DeviceResponse object by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/102
+- [x] fix: added section on non-documented errors by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/92
+
+### Changed
+
+- [x] refactor!: changed discovery operation method from GET to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/78
+- [x] docs: updated examples and usage description following refactoring to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/81
+- [x] refactor!: feature file updated to reflect change from GET to POST by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/118
+- [x] fix: updated 200 OK Response to a schema object by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/117
+- [x] fix: changed XCorrelator to an object and added resulting $refs by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/116 
+- [x] fix: updated x-correlator pattern by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/93 
+- [x] fix: updated x-camara-commonalities to 0.6 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/101 
+- [x] test: updated x-correlator in .feature to assert compliance with common schema by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/114
+- [x] docs: updated ref to Commonalities version in Device object description
+      
+### Removed
+
+- [x] fix: removed 401 AUTHENTICATION_REQUIRED by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/90 
+- [x] fix: removed 422 IDENTIFIER MISMATCH by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/89 
 
 # r2.1 - rc
 
@@ -63,7 +106,6 @@ It contains the **following breaking changes** compared to the last public relea
 
 - [x] fix: removed 401 AUTHENTICATION_REQUIRED by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/90 
 - [x] fix: removed 422 IDENTIFIER MISMATCH by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/89 
-
 
 # r1.3
 

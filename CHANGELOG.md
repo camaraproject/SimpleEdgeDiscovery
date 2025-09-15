@@ -4,7 +4,7 @@ NOTE:
 
 ## Table of contents
 
-- [r2.2](#r22)
+- [r2.2](#r22---(Fall25-public-release))
 - [r2.1 - rc](#r21---rc)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)

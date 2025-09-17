@@ -30,14 +30,15 @@ Feature: CAMARA Simple Edge Discovery API, v2.0.0 - Operation readClosestEdgeClo
     And the 200Success object includes the EdgeCloudZone object defined at "#/components/schemas/EdgeCloudZone"
     And the 200Success object includes the optional DeviceResponseBody object defined at "DeviceResponseBody"
 
-  @simple_edge_discovery_error_scenario_01_422_device_cannot_be_identified
+  @simple_edge_discovery_error_scenario_01_404_device_cannot_be_identified
   Scenario: Error because the device cannot be identified
-    Given the request "readClosestEdgeCloudZone" is sent
-    When the provided identifier(s) cannot be matched to a device
-    Then the response status code is 422
+    Given that the device cannot be identified from the access token
+    And the request body property "$.device" is compliant with the request body schema but does not identify a valid device
+    When the request "readClosestEdgeCloudZone" is sent
+    Then the response status code is 404
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
-    And the response property "$.status" is 422
+    And the response property "$.status" is 404
     And the response property "$.code" is "IDENTIFIER_NOT_FOUND"
     And the response property "$.message" contains a user friendly text
 

@@ -21,19 +21,25 @@ Incubating API Repository to evolve and maintain the definitions and documentati
 * Describe, develop, document, and test the APIs
 * Started: June 2022 (as part of [EdgeCloud](https://github.com/camaraproject/EdgeCloud/))
 
+<!-- CAMARA:RELEASE-INFO:START -->
+<!-- The following section is automatically maintained by the CAMARA project-administration tooling: https://github.com/camaraproject/project-administration -->
+
 ## Release Information
 
-* Note: Please be aware that the project will have frequent updates to the main branch. There are no compatibility guarantees associated with code in any branch, including main, until a new release is created. For example, changes may be reverted before a release is created. **For best results, use the latest public release**.
+> [!NOTE]
+> Please be aware that the project will have frequent updates to the main branch. There are no compatibility guarantees associated with code in any branch, including main, until a new release is created. For example, changes may be reverted before a release is created. **For best results, use the latest available release**.
 
-* **NEW: public release [r2.2](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r2.2) is available, with the following API version:**
-
-  * **simple-edge-discovery v2.0.0**  
+* **NEW**: The latest public release is [r2.2](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r2.2) (Fall25), with the following API versions:
+  * **simple-edge-discovery v2.0.0**
   [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.2/code/API_definitions/simple-edge-discovery.yaml)
-  [[View it on ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml&nocors)
-  [[View it on Swagger Editor]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml)
-  
-* Previous releases and pre-releases are available [here](https://github.com/camaraproject/SimpleEdgeDiscovery/releases) 
-* For changes see [CHANGELOG.md](/CHANGELOG.md)
+  [[ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  [[Swagger]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml)
+* The latest public release is always available here: https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest
+* Other releases of this repository are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
+* For changes see [CHANGELOG.md](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/CHANGELOG.md)
+
+_The above section is automatically synchronized by CAMARA project-administration._
+<!-- CAMARA:RELEASE-INFO:END -->
 
 ## Contributing
 * Meetings (as part of Edge Cloud Sub Project)

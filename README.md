@@ -22,7 +22,7 @@ Incubating API Repository to evolve and maintain the definitions and documentati
 * Started: June 2022 (as part of [EdgeCloud](https://github.com/camaraproject/EdgeCloud/))
 
 <!-- CAMARA:RELEASE-INFO:START -->
-<!-- The following section is automatically maintained by the CAMARA project-administration tooling: https://github.com/camaraproject/project-administration -->
+<!-- This section is automatically maintained by the CAMARA project-administration tooling: https://github.com/camaraproject/project-administration -->
 
 ## Release Information
 

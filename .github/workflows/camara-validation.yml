@@ -31,5 +31,5 @@ permissions:
 
 jobs:
   validation:
-    uses: camaraproject/tooling/.github/workflows/validation.yml@v1-rc
+    uses: camaraproject/tooling/.github/workflows/validation.yml@validation-framework
     secrets: inherit

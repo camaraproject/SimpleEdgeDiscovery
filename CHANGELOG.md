@@ -85,19 +85,19 @@ The API definition(s) are based on
 
 ### Added
 
-* _To be filled during release review_
+* None
 
 ### Changed
 
-* _To be filled during release review_
+* None
 
 ### Fixed
 
-* _To be filled during release review_
+*  fix:  error 400 reference from Generic401 to Generic400 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/150
 
 ### Removed
 
-* _To be filled during release review_
+* None
 
 **Full Changelog**: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r2.2...r2.3
 

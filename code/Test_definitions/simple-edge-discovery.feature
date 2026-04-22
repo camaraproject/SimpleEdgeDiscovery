@@ -2,7 +2,7 @@ Feature: CAMARA Simple Edge Discovery API, wip - Operation readClosestEdgeCloudZ
 
   Background:
     Given an environment at "apiRoot"
-    And the resource "/simple-edge-discovery/vwip/retrieve-closest-edge-cloud-zone"                                                |
+    And the resource "/simple-edge-discovery/v2/retrieve-closest-edge-cloud-zone"                                                |
     And the header "Content-Type" is set to "application/json"
     And the header "Authorization" is set to a valid access token
     And the header "x-correlator" complies with the schema at "#/components/schemas/XCorrelator"

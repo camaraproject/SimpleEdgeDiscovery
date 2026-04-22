@@ -1,0 +1,13 @@
+repository:
+  repository_name: SimpleEdgeDiscovery
+  release_tag: r2.3
+  release_type: maintenance-release
+  release_date: null
+  src_commit_sha: c6d3fe497e8b88fe10abc0a33f6eb056898854c7
+apis:
+- api_name: simple-edge-discovery
+  api_version: 2.0.1
+  api_title: Simple Edge Discovery
+dependencies:
+  commonalities_release: r3.4 (0.6.1)
+  identity_consent_management_release: r3.3 (0.4.0)

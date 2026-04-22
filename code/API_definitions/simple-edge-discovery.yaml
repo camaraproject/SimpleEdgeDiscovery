@@ -237,7 +237,7 @@ paths:
         "200":
           $ref: "#/components/responses/200Success"
         "400":
-          $ref: "#/components/responses/Generic401"
+          $ref: "#/components/responses/Generic400"
         "401":
           $ref: "#/components/responses/Generic401"
         "403":

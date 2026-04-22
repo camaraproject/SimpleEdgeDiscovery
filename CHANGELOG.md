@@ -76,7 +76,7 @@ The API definition(s) are based on
 
 ## simple-edge-discovery 2.0.1
 
-**simple-edge-discovery 2.0.1 is ...**
+**simple-edge-discovery 2.0.1 is a patch release. Implementers of simple-edge-discovery 2.0.0 should upgrade accordingly.**
 
 - API definition **with inline documentation**:
   - [View it on ReDoc](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.3/code/API_definitions/simple-edge-discovery.yaml&nocors)

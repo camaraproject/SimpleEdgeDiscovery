@@ -29,14 +29,13 @@ Incubating API Repository to evolve and maintain the definitions and documentati
 > [!NOTE]
 > Please be aware that the project will have frequent updates to the main branch. There are no compatibility guarantees associated with code in any branch, including main, until a new release is created. For example, changes may be reverted before a release is created. **For best results, use the latest available release**.
 
-* **NEW**: The latest public release is [r2.2](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r2.2) (Fall25), with the following API versions:
-  * **simple-edge-discovery v2.0.0**
-  [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.2/code/API_definitions/simple-edge-discovery.yaml)
-  [[ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml&nocors)
-  [[Swagger]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.2/code/API_definitions/simple-edge-discovery.yaml)
+* The latest public release is [r2.3](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r2.3) (Fall25), with the following API versions:
+  * **simple-edge-discovery 2.0.1**
+  [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.3/code/API_definitions/simple-edge-discovery.yaml)  [[ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.3/code/API_definitions/simple-edge-discovery.yaml&nocors)  [[Swagger]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.3/code/API_definitions/simple-edge-discovery.yaml)
+
 * The latest public release is always available here: https://github.com/camaraproject/SimpleEdgeDiscovery/releases/latest
 * Other releases of this repository are available in https://github.com/camaraproject/SimpleEdgeDiscovery/releases
-* For changes see [CHANGELOG.md](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/CHANGELOG.md)
+* For changes see [CHANGELOG](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/main/CHANGELOG.md)
 
 _The above section is automatically synchronized by CAMARA project-administration._
 <!-- CAMARA:RELEASE-INFO:END -->

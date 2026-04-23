@@ -3,18 +3,17 @@
 
 # Changelog Simple Edge Discovery
 
-NOTE: 
-
-## Table of contents
-
-- [r2.2](#r22---Fall25-public-release)
+<!-- TOC:START -->
+## Table of Contents
+- **[r2.3](#r23)**
+- [r2.2 - Fall25 public release](#r22---fall25-public-release)
 - [r2.1 - rc](#r21---rc)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
 - [r1.1 - rc](#r11---rc)
 - [r0.9.3 - rc](#r093---rc)
 - [r0.8.1](#r081)
-
+<!-- TOC:END -->
 
 **Please be aware that the project will have frequent updates to the main branch. There are no compatibility guarantees associated with code in any branch, including main, until it has been released. For example, changes may be reverted before a release is published. For the best results, use the latest published release.**
 
@@ -26,6 +25,44 @@ The below sections record the changes for each API version in each release as fo
 * for a public release, the consolidated changes since the previous public release
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API Sub Project, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
+
+# r2.3
+
+## Release Notes
+
+This maintenance release contains the definition and documentation of
+* simple-edge-discovery 2.0.1
+
+The API definition(s) are based on
+* Commonalities 0.6.1
+* Identity and Consent Management 0.4.0
+
+## simple-edge-discovery 2.0.1
+
+**simple-edge-discovery 2.0.1 is a patch release. Implementers of simple-edge-discovery 2.0.0 should upgrade accordingly.**
+
+- API definition **with inline documentation**:
+  - [View it on ReDoc](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.3/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  - [View it on Swagger Editor](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.3/code/API_definitions/simple-edge-discovery.yaml)
+  - OpenAPI [YAML spec file](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.3/code/API_definitions/simple-edge-discovery.yaml)
+
+### Added
+
+* None
+
+### Changed
+
+* None
+
+### Fixed
+
+*  fix:  error 400 reference from Generic401 to Generic400 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/150
+
+### Removed
+
+* None
+
+**Full Changelog**: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r2.2...r2.3
 
 # r2.2 - Fall25 public release
 
@@ -149,7 +186,6 @@ It contains the following changes compared to last public release [r0.9.3 - rc](
 ### Fixed
   - Trailiing whitespace issues in YAML
 
-
  Changelog from r1.3 to r1.2 only: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.2...r1.3
 
 # r1.2 - rc
@@ -172,7 +208,6 @@ It contains the following corrections compared to [r1.1 - rc](#r11---rc).
   - documentation: updated section on authentication and authorisation
 
 Full Changelog: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r1.1...r1.2
-
 
 # r1.1 - rc
 
@@ -238,10 +273,8 @@ The release note is available [here](https://github.com/camaraproject/EdgeCloud/
 Note: ths was released in the EdgeCloud repository, hence it includes the other EdgeCloud APIs/materials. The changes related to SimpleEdgeDiscovery are listed below. 
 The release note is available [here](https://github.com/camaraproject/EdgeCloud/releases/tag/v0.9.3-rc).
 
-
 ### Fixed
 - API versioning set to vx.y.z format, https://github.com/camaraproject/EdgeCloud/issues/50
 - updated to CamelCase where required, https://github.com/camaraproject/EdgeCloud/pull/87 
-
 
 **Full Changelog**: [https://github.com/camaraproject/EdgeCloud/commits/v0.8.1](https://github.com/camaraproject/EdgeCloud/commit/b427105f1f30485606a84c3db6d6d4eeb6c9cc02)

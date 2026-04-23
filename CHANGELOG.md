@@ -1,10 +1,9 @@
 # Changelog Simple Edge Discovery
 
-NOTE: 
-
 ## Table of contents
 
-- [r2.2](#r22---Fall25-public-release)
+- [r2.3](#r23) Fall25 maintenance release
+- [r2.2](#r22) Fall25 public release
 - [r2.1 - rc](#r21---rc)
 - [r1.3](#r13)
 - [r1.2 - rc](#r12---rc)
@@ -24,7 +23,43 @@ The below sections record the changes for each API version in each release as fo
 
 NOTE: SimpleEdgeDiscovery is part of the EdgeCloud API Sub Project, and was previously developed within the [EdgeCloud](https://github.com/camaraproject/EdgeCloud) repository. Two releases were made within EdgeCloud, v0.81 and r0.9.3-rc. These releases also include the other EdgeCloud APIs and materials, so the changelog below highlights only the changes related to SimpleEdgeDiscovery. Further information and links to the releases in EdgeCloud can be found below.
 
-# r2.2 - Fall25 public release
+# r2.3
+
+This maintenance release contains the definition and documentation of
+* simple-edge-discovery 2.0.1
+
+The API definition(s) are based on
+* Commonalities 0.6.1
+* Identity and Consent Management 0.4.0
+
+## simple-edge-discovery 2.0.1
+
+**simple-edge-discovery 2.0.1 is a patch release. Implementers of simple-edge-discovery 2.0.0 should upgrade accordingly.**
+
+- API definition **with inline documentation**:
+  - [View it on ReDoc](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.3/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  - [View it on Swagger Editor](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r2.3/code/API_definitions/simple-edge-discovery.yaml)
+  - OpenAPI [YAML spec file](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r2.3/code/API_definitions/simple-edge-discovery.yaml)
+
+### Added
+
+* None
+
+### Changed
+
+* None
+
+### Fixed
+
+- [x] fix:  error 400 reference from Generic401 to Generic400 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/150
+
+### Removed
+
+* None
+
+**Full Changelog**: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r2.2...r2.3
+
+# r2.2
 
 This public release contains the definition and documentation of
 * simple-edge-discovery v2.0.0

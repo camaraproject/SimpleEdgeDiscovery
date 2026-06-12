@@ -432,6 +432,7 @@ components:
       example: "b4333c46-49c0-4f62-80d7-f0ef930f1c46"
 
     DeviceResponseBody:
+      type: object
       description: |
         The optional device identifier to include in the response
       properties:

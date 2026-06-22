@@ -43,7 +43,7 @@ _The above section is automatically synchronized by CAMARA project-administratio
 ## Contributing
 * Meetings (as part of Edge Cloud Sub Project)
     * [Registration/Join](https://zoom-lfx.platform.linuxfoundation.org/meeting/94237809115?password=05fb6d8a-a913-47d8-b003-db75ecdaa5d9)
-    * Schedule: Tuesdays 16h-17 CET, every two weeks.
+    * Schedule: Mondays 16h-17 CET, every two weeks.
     * Minutes: Access [meeting minutes](https://wiki.camaraproject.org/display/CAM/EdgeCloud+Meeting+Minutes).
 * Mailing List
     * Subscribe / Unsubscribe to the mailing list of this Sub Project [https://lists.camaraproject.org/g/sp-edc](https://lists.camaraproject.org/g/sp-edc).

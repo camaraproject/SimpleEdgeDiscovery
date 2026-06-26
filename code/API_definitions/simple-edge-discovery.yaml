@@ -113,7 +113,6 @@ info:
     with an explanation.
 
     <!-- CAMARA:MANDATORY:additional-error-responses:BEGIN -->
-    
     # Additional CAMARA error responses
 
     The list of error codes in this API specification is not exhaustive. Therefore the API specification MAY not document some non-mandatory error statuses as indicated in `CAMARA API Design Guide`.
@@ -124,7 +123,6 @@ info:
     <!-- CAMARA:MANDATORY:additional-error-responses:END -->
 
     <!-- CAMARA:MANDATORY:authorization-and-authentication:BEGIN -->
-    
     # Authorization and authentication
 
     The "Camara Security and Interoperability Profile" provides details of how
@@ -186,7 +184,6 @@ info:
     and not any associated devices.
 
     <!-- CAMARA:MANDATORY:request-body-strictness:BEGIN -->
-    
     # Request body strictness
 
     This API rejects requests with JSON request bodies that contain properties not declared

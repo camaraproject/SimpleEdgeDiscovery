@@ -282,7 +282,6 @@ components:
       required: false
       schema:
         $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
-  
   schemas:
     EdgeCloudZone:
       type: object

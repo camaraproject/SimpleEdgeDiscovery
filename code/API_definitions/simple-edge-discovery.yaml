@@ -131,10 +131,9 @@ info:
     for the released version of the profile.
 
     The specific authorization flows to be used will be agreed upon during the
-    onboarding process, happening between the provider of the application consuming
-    the API and the operator's API exposure platform, taking into account the
-    declared purpose for accessing the API, whilst also being subject to the
-    prevailing legal framework dictated by local legislation.
+    onboarding process, happening between the API consumer and API provider,
+    taking into account the declared purpose for accessing the API, whilst also
+    being subject to the prevailing legal framework dictated by local legislation.
 
     In cases where personal data is processed by the API and users can exercise
     their rights through mechanisms such as opt-in and/or opt-out, the use of

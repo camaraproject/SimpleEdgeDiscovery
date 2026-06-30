@@ -203,7 +203,7 @@ servers:
   - url: "{apiRoot}/simple-edge-discovery/vwip"
     variables:
       apiRoot:
-        default: https://localhost:9091
+        default: http://localhost:9091
         description: |
           API root, defined by the service provider, e.g.
           `api.example.com` or `api.example.com/somepath`

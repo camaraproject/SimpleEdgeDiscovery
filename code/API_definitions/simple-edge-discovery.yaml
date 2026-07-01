@@ -131,10 +131,9 @@ info:
     for the released version of the profile.
 
     The specific authorization flows to be used will be agreed upon during the
-    onboarding process, happening between the provider of the application consuming
-    the API and the operator's API exposure platform, taking into account the
-    declared purpose for accessing the API, whilst also being subject to the
-    prevailing legal framework dictated by local legislation.
+    onboarding process, happening between the API consumer and API provider,
+    taking into account the declared purpose for accessing the API, whilst also
+    being subject to the prevailing legal framework dictated by local legislation.
 
     In cases where personal data is processed by the API and users can exercise
     their rights through mechanisms such as opt-in and/or opt-out, the use of
@@ -204,10 +203,8 @@ servers:
   - url: "{apiRoot}/simple-edge-discovery/vwip"
     variables:
       apiRoot:
-        default: https://localhost:9091
-        description: |
-          API root, defined by the service provider, e.g.
-          `api.example.com` or `api.example.com/somepath`
+        default: http://localhost:9091
+        description: API root, defined by the service provider, e.g. `api.example.com` or `api.example.com/somepath`
 
 tags:
   - name: Discovery
@@ -307,18 +304,21 @@ components:
         Operator-issued UUID for the Edge Cloud Zone.
       type: string
       format: uuid
+      maxLength: 128
       additionalProperties: false
 
     EdgeCloudZoneName:
       description: |
         Edge Cloud Zone Name - the common name for the Edge Cloud Zone.
       type: string
+      maxLength: 64
       additionalProperties: false
 
     EdgeCloudProvider:
       description: |
         The company name of the Edge Cloud Zone provider.
       type: string
+      maxLength: 64
 
     RequestBody:
       description: Common request body to allow optional Device object to be passed

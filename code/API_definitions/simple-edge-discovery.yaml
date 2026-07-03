@@ -220,6 +220,7 @@ paths:
       operationId: readClosestEdgeCloudZone
       parameters:
         - in: header
+          description: Correlation id for the different services
           name: x-correlator
           schema:
             $ref: "../common/CAMARA_common.yaml#/components/schemas/XCorrelator"
@@ -273,9 +274,10 @@ components:
 
   headers:
     x-correlator:
+      description: Correlation id for the different services
       schema:
         $ref: "../common/CAMARA_common.yaml#/components/schemas/XCorrelator"
-        
+
   schemas:
     EdgeCloudZone:
       type: object

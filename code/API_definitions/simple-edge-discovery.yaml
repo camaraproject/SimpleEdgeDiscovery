@@ -222,7 +222,7 @@ paths:
         - in: header
           name: x-correlator
           schema:
-            $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
+            $ref: "../common/CAMARA_common.yaml#/components/schemas/XCorrelator"
       requestBody:
         description: Parameters to create a new session
         required: true
@@ -274,7 +274,7 @@ components:
   headers:
     x-correlator:
       schema:
-        $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
+        $ref: "../common/CAMARA_common.yaml#/components/schemas/XCorrelator"
         
   schemas:
     EdgeCloudZone:
@@ -343,7 +343,7 @@ components:
       description: 200 OK
       headers:
         x-correlator:
-          $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
+          $ref: "../common/CAMARA_common.yaml#/components/schemas/XCorrelator"
       content:
         application/json:
           schema:

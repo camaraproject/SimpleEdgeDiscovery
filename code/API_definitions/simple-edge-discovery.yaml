@@ -221,8 +221,6 @@ paths:
       parameters:
         - in: header
           name: x-correlator
-          description: Correlation id for the different services
-          required: false
           schema:
             $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
       requestBody:
@@ -275,10 +273,9 @@ components:
 
   headers:
     x-correlator:
-      description: Correlation id for the different services
-      required: false
       schema:
         $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
+        
   schemas:
     EdgeCloudZone:
       type: object
@@ -346,7 +343,7 @@ components:
       description: 200 OK
       headers:
         x-correlator:
-          $ref: "../common/CAMARA_common.yaml#/components/headers/x-correlator"
+          $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
       content:
         application/json:
           schema:

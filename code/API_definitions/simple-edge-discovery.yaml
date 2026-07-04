@@ -219,12 +219,7 @@ paths:
             - simple-edge-discovery:read
       operationId: readClosestEdgeCloudZone
       parameters:
-        - in: header
-          name: x-correlator
-          description: Correlation id for the different services
-          required: false
-          schema:
-            $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
+        - $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
       requestBody:
         description: Parameters to create a new session
         required: true
@@ -273,12 +268,6 @@ components:
     openId:
       $ref: "../common/CAMARA_common.yaml#/components/securitySchemes/openId"
 
-  headers:
-    x-correlator:
-      description: Correlation id for the different services
-      required: false
-      schema:
-        $ref: "../common/CAMARA_common.yaml#/components/parameters/x-correlator"
   schemas:
     EdgeCloudZone:
       type: object

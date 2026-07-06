@@ -80,7 +80,7 @@ Changes documented below are compared to version 2.0.1.
 
 ### Fixed
 
-* N/A
+* fix: minor typo in AuthZ/AuthN text in template by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/181
 
 ### Removed
 

@@ -138,7 +138,7 @@ Feature: CAMARA Simple Edge Discovery API, wip - Operation readClosestEdgeCloudZ
     Examples:
       | device_identifier                | oas_spec_schema                             |
       | $.device.phoneNumber             | /components/schemas/PhoneNumber             |
-      | $.device.ipv4Address             | /components/schemas/DeviceIpv4Addr          |
+      | $.device.ipv4Address             | /components/schemas/DeviceIpv4Address       |
       | $.device.ipv6Address             | /components/schemas/DeviceIpv6Address       |
       | $.device.networkAccessIdentifier | /components/schemas/NetworkAccessIdentifier |
 

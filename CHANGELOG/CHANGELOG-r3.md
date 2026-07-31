@@ -81,7 +81,10 @@ Changes documented below are compared to version 2.0.1.
 
 ### Fixed
 
-* N/A
+- #185
+- #181 
+- #179
+- #154
 
 ### Removed
 

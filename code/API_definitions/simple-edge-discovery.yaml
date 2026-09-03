@@ -241,17 +241,17 @@ paths:
         "200":
           $ref: "#/components/responses/200Success"
         "400":
-          $ref: "../common/CAMARA_common.yaml#/components/responses/Generic400"
+          $ref: "../common/CAMARA_common.yaml#/components/responses/BadRequest400"
         "401":
-          $ref: "../common/CAMARA_common.yaml#/components/responses/Generic401"
+          $ref: "../common/CAMARA_common.yaml#/components/responses/Unauthenticated401"
         "403":
-          $ref: "../common/CAMARA_common.yaml#/components/responses/Generic403"
+          $ref: "../common/CAMARA_common.yaml#/components/responses/PermissionDenied403"
         "404":
-          $ref: "../common/CAMARA_common.yaml#/components/responses/Generic404"
+          $ref: "../common/CAMARA_common.yaml#/components/responses/IdentifierNotFound404"
         "422":
-          $ref: "../common/CAMARA_common.yaml#/components/responses/Generic422"
+          $ref: "../common/CAMARA_common.yaml#/components/responses/DeviceIdentifier422"
         "429":
-          $ref: "../common/CAMARA_common.yaml#/components/responses/Generic429"
+          $ref: "../common/CAMARA_common.yaml#/components/responses/TooManyRequests429"
 
       tags:
         - Discovery

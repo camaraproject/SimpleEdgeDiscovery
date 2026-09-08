@@ -197,7 +197,7 @@ info:
 
 externalDocs:
   description: Product documentation at CAMARA.
-  url: https://github.com/camaraproject/EdgeCloud
+  url: https://github.com/camaraproject/SimpleEdgeDiscovery
 
 servers:
   - url: "{apiRoot}/simple-edge-discovery/vwip"

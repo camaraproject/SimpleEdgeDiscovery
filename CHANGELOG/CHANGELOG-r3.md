@@ -69,7 +69,7 @@ Changes documented below are compared to version 2.1.0-rc.2.
 
 ### Fixed
 
-* N/A
+* fix: alignment with Commonalities r4.4 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/203
 
 ### Removed
 

@@ -39,9 +39,9 @@ Incubating API Repository to evolve and maintain the definitions and documentati
 
 ### Upcoming Release Preview
 
-* Pre-release: [r3.1](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r3.1) (release candidate)
-  * **simple-edge-discovery 2.1.0-rc.2**
-  [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r3.1/code/API_definitions/simple-edge-discovery.yaml)  [[ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r3.1/code/API_definitions/simple-edge-discovery.yaml&nocors)  [[Swagger]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r3.1/code/API_definitions/simple-edge-discovery.yaml)
+* Pre-release: [r3.2](https://github.com/camaraproject/SimpleEdgeDiscovery/releases/tag/r3.2) (release candidate)
+  * **simple-edge-discovery 2.1.0-rc.3**
+  [[YAML]](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r3.2/code/API_definitions/simple-edge-discovery.yaml)  [[ReDoc]](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r3.2/code/API_definitions/simple-edge-discovery.yaml&nocors)  [[Swagger]](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r3.2/code/API_definitions/simple-edge-discovery.yaml)
 
 
 _The above section is automatically synchronized by CAMARA project-administration._

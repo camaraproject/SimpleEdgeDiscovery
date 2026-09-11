@@ -2,6 +2,7 @@
 
 <!-- TOC:START -->
 ## Table of Contents
+- [r3.2](#r32)
 - [r3.1](#r31)
 <!-- TOC:END -->
 
@@ -13,6 +14,50 @@ The below sections record the changes for each API version in each release as fo
 * for the first release-candidate, all changes since the last public release
 * for subsequent release-candidate(s), only the delta to the previous release-candidate
 * for a public release, the consolidated changes since the previous public release
+
+# r3.2
+
+## Release Notes
+
+This release candidate contains the definition and documentation of
+* simple-edge-discovery 2.1.0-rc.3
+
+The API definition(s) are based on
+* Commonalities r4.4 (0.9.0)
+* Identity and Consent Management r4.2 (0.5.0)
+
+## simple-edge-discovery 2.1.0-rc.3
+
+**simple-edge-discovery 2.1.0-rc.3 is a release-candidate version of this API.**
+
+Changes documented below are compared to version 2.1.0-rc.2.
+
+- API definition **with inline documentation**:
+  - [View it on ReDoc](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r3.2/code/API_definitions/simple-edge-discovery.yaml&nocors)
+  - [View it on Swagger Editor](https://camaraproject.github.io/swagger-ui/?url=https://raw.githubusercontent.com/camaraproject/SimpleEdgeDiscovery/r3.2/code/API_definitions/simple-edge-discovery.yaml)
+  - OpenAPI [YAML spec file](https://github.com/camaraproject/SimpleEdgeDiscovery/blob/r3.2/code/API_definitions/simple-edge-discovery.yaml)
+
+### Breaking changes
+
+* N/A
+
+### Added
+
+* N/A
+
+### Changed
+
+* N/A
+
+### Fixed
+
+* fix: alignment with Commonalities r4.4 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/203
+
+### Removed
+
+* N/A
+
+**Full Changelog**: https://github.com/camaraproject/SimpleEdgeDiscovery/compare/r3.1...r3.2
 
 # r3.1
 

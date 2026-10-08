@@ -89,7 +89,12 @@ Changes documented below are compared to version 2.0.1.
 * N/A
 
 ### Fixed
-
+* fix: add explicit type: object to DeviceResponseBody (S-016) by @hdamker in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/154
+* fix: fixed validation warnings for `info.description`, `apiRoot` and string `maxLength` constraints by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/179
+* fix: minor typo in AuthZ/AuthN text in template by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/181
+* fix: align x-correlator references with Commonalities by @hdamker in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/185
+* fix: feature schema reference from `DeviceIpv4Addr` to `DeviceIpv4Add… by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/193
+* fix: alignment with Commonalities r4.4 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/203
 * N/A
 
 ### Removed

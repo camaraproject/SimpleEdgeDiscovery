@@ -189,3 +189,15 @@ Feature: CAMARA Simple Edge Discovery API, wip - Operation readClosestEdgeCloudZ
     And the response property "$.status" is 401
     And the response property "$.code" is "UNAUTHENTICATED"
     And the response property "$.message" contains a user friendly text
+
+  @simple_edge_discovery_error_scenario_14_429_Too_Many_Requests
+  #To test this scenario environment has to be configured to reject requests reaching the threshold limit set.
+  Scenario: Request is rejected due to threshold policy
+    Given a valid request for "readClosestEdgeCloudZone"
+    And the header "Authorization" is set to a valid access token
+    And the threshold of requests has been reached
+    When the request "readClosestEdgeCloudZone" is sent
+    Then the response status code is 429
+    And the response property "$.status" is 429
+    And the response property "$.code" is "TOO_MANY_REQUESTS"
+    And the response property "$.message" contains a user friendly text

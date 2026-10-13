@@ -95,7 +95,6 @@ Changes documented below are compared to version 2.0.1.
 * fix: align x-correlator references with Commonalities by @hdamker in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/185
 * fix: feature schema reference from `DeviceIpv4Addr` to `DeviceIpv4Add… by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/193
 * fix: alignment with Commonalities r4.4 by @Kevsy in https://github.com/camaraproject/SimpleEdgeDiscovery/pull/203
-* N/A
 
 ### Removed
 

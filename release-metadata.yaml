@@ -2,7 +2,7 @@ repository:
   repository_name: SimpleEdgeDiscovery
   release_tag: r3.3
   release_type: public-release
-  release_date: null
+  release_date: '2026-10-16T09:46:00Z'
   src_commit_sha: 084c86574c89f842c8419bc0ebd90509f09390b0
 apis:
 - api_name: simple-edge-discovery
